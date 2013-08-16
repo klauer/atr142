@@ -1,0 +1,54 @@
+
+## Parameter 63: Timer function. 
+record(mbbi, "$(P)TIMER_FCN_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 2 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Timer function")
+    
+    field("ZRST", "Disable")
+    field("ONST", "Single timer sec")
+    field("TWST", "Double timer sec")
+    field("THST", "Dbl seq timer s")
+    field("FRST", "Dbl timer loop s")
+    field("FVST", "Single timer min")
+    field("SXST", "Double timer min")
+    field("SVST", "Dbl seq timer m")
+    field("EIST", "Dbl timer loop m")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+    field("EIVL", "8")
+
+}
+
+record(mbbo, "$(P)TIMER_FCN_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 2 0x000F)")
+    field(DESC, "Timer function")
+    field("ZRST", "Disable")
+    field("ONST", "Single timer sec")
+    field("TWST", "Double timer sec")
+    field("THST", "Dbl seq timer s")
+    field("FRST", "Dbl timer loop s")
+    field("FVST", "Single timer min")
+    field("SXST", "Double timer min")
+    field("SVST", "Dbl seq timer m")
+    field("EIST", "Dbl timer loop m")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+    field("EIVL", "8")
+
+}
+

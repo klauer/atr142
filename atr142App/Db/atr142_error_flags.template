@@ -1,0 +1,103 @@
+record(mbbiDirect, "$(P)$(R)") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT) $(OFFSET) 0x000F)")
+    field(SCAN, "$(SCAN)")
+    #field(TPRO, 1)
+    field(FLNK, "$(P)$(R)_FANOUT")
+}
+
+record(fanout, "$(P)$(R)_FANOUT") {
+    field(LNK1, "$(P)EEPROM_WRITE_ERROR")
+    field(LNK2, "$(P)EEPROM_READ_ERROR")
+    field(LNK3, "$(P)CJ_ERROR")
+    field(LNK4, "$(P)GENERIC_ERROR")
+    field(LNK5, "$(P)HARDWARE_ERROR")
+    field(LNK6, "$(P)MASTER_OFFLINE_ERROR")
+    field(FLNK, "$(P)$(R)_FANOUT_2")
+}
+
+record(fanout, "$(P)$(R)_FANOUT_2") {
+    field(LNK1, "$(P)CALIBRATION_ERROR")
+}
+
+record(bi, "$(P)EEPROM_WRITE_ERROR") {
+    field(INP, "$(P)$(R).B0")
+    #field(TPRO, 1)
+
+    field(ONAM, "EEPROM write error")
+    field(OSV, "MAJOR")
+
+    field(ZNAM, "No error")
+    field(ZSV, "NO_ALARM")
+
+}
+record(bi, "$(P)EEPROM_READ_ERROR") {
+    field(INP, "$(P)$(R).B1")
+    #field(TPRO, 1)
+
+    field(ONAM, "EEPROM read error")
+    field(OSV, "MAJOR")
+
+    field(ZNAM, "No error")
+    field(ZSV, "NO_ALARM")
+
+}
+
+record(bi, "$(P)CJ_ERROR") {
+    field(INP, "$(P)$(R).B2")
+    #field(TPRO, 1)
+
+    field(ONAM, "Cold junction error")
+    field(OSV, "MAJOR")
+
+    field(ZNAM, "No error")
+    field(ZSV, "NO_ALARM")
+
+}
+record(bi, "$(P)GENERIC_ERROR") {
+    field(INP, "$(P)$(R).B3")
+    #field(TPRO, 1)
+
+    field(ONAM, "Generic error")
+    field(OSV, "MINOR")
+
+    field(ZNAM, "No error")
+    field(ZSV, "NO_ALARM")
+
+}
+
+record(bi, "$(P)HARDWARE_ERROR") {
+    field(INP, "$(P)$(R).B4")
+    #field(TPRO, 1)
+
+    field(ONAM, "Hardware error")
+    field(OSV, "MAJOR")
+
+    field(ZNAM, "No error")
+    field(ZSV, "NO_ALARM")
+
+}
+
+record(bi, "$(P)MASTER_OFFLINE_ERROR") {
+    field(INP, "$(P)$(R).B5")
+    #field(TPRO, 1)
+
+    field(ONAM, "Master offline error")
+    field(OSV, "MINOR")
+
+    field(ZNAM, "No error")
+    field(ZSV, "NO_ALARM")
+
+}
+
+record(bi, "$(P)CALIBRATION_ERROR") {
+    field(INP, "$(P)$(R).B6")
+    #field(TPRO, 1)
+
+    field(ONAM, "Missing calibration error")
+    field(OSV, "MAJOR")
+
+    field(ZNAM, "No error")
+    field(ZSV, "NO_ALARM")
+
+}

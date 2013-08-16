@@ -1,0 +1,486 @@
+
+## Parameter 23: Alarm 1 operating mode. Use $(P)PARAMETER23 for Timer 1-2 Warning Expiring (16)
+record(mbbi, "$(P)ALARM1_OP_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 2 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Alarm 1 operating mode")
+    
+    field("ZRST", "Disabled")
+    field("ONST", "Absolute Alarm")
+    field("TWST", "Band Alarm")
+    field("THST", "High Deviation")
+    field("FRST", "Low Deviation")
+    field("FVST", "Absolute Command")
+    field("SXST", "Start/Run Active")
+    field("SVST", "Cooling")
+    field("EIST", "T1 Start Alarm")
+    field("NIST", "T1 End Alarm")
+    field("TEST", "T1 Warn Expire")
+    field("ELST", "T2 Start Alarm")
+    field("TVST", "T2 End Alarm")
+    field("TTST", "T2 Warn Expire")
+    field("FTST", "T1-2 Start Alarm")
+    field("FFST", "T1-2 End Alarm")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+    field("EIVL", "8")
+    field("NIVL", "9")
+    field("TEVL", "10")
+    field("ELVL", "11")
+    field("TVVL", "12")
+    field("TTVL", "13")
+    field("FTVL", "14")
+    field("FFVL", "15")
+
+}
+
+record(mbbo, "$(P)ALARM1_OP_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 2 0x000F)")
+    field(DESC, "Alarm 1 operating mode")
+    field("ZRST", "Disabled")
+    field("ONST", "Absolute Alarm")
+    field("TWST", "Band Alarm")
+    field("THST", "High Deviation")
+    field("FRST", "Low Deviation")
+    field("FVST", "Absolute Command")
+    field("SXST", "Start/Run Active")
+    field("SVST", "Cooling")
+    field("EIST", "T1 Start Alarm")
+    field("NIST", "T1 End Alarm")
+    field("TEST", "T1 Warn Expire")
+    field("ELST", "T2 Start Alarm")
+    field("TVST", "T2 End Alarm")
+    field("TTST", "T2 Warn Expire")
+    field("FTST", "T1-2 Start Alarm")
+    field("FFST", "T1-2 End Alarm")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+    field("EIVL", "8")
+    field("NIVL", "9")
+    field("TEVL", "10")
+    field("ELVL", "11")
+    field("TVVL", "12")
+    field("TTVL", "13")
+    field("FTVL", "14")
+    field("FFVL", "15")
+
+}
+
+
+## Parameter 24: Alarm 1 state output. Output contact and intervention type
+record(mbbi, "$(P)ALARM1_ST_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 3 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Alarm 1 state output")
+    
+    field("ZRST", "N.O. Start")
+    field("ONST", "N.C. Start")
+    field("TWST", "N.O. Threshold")
+    field("THST", "N.C. Threshold")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+
+}
+
+record(mbbo, "$(P)ALARM1_ST_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 3 0x000F)")
+    field(DESC, "Alarm 1 state output")
+    field("ZRST", "N.O. Start")
+    field("ONST", "N.C. Start")
+    field("TWST", "N.O. Threshold")
+    field("THST", "N.C. Threshold")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+
+}
+
+
+## Parameter 25: Alarm 1 reset. Type of reset contact
+record(mbbi, "$(P)ALARM1_RESET_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 4 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Alarm 1 reset")
+    
+    field("ZRST", "Automatic reset")
+    field("ONST", "Manual Reset")
+    field("TWST", "Manual Stored")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+record(mbbo, "$(P)ALARM1_RESET_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 4 0x000F)")
+    field(DESC, "Alarm 1 reset")
+    field("ZRST", "Automatic reset")
+    field("ONST", "Manual Reset")
+    field("TWST", "Manual Stored")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+
+## Parameter 26: Alarm 1 state error. 
+record(mbbi, "$(P)ALARM1_ST_ER_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 5 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Alarm 1 state error")
+    
+    field("ZRST", "OK")
+    field("ONST", "Errored")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+
+}
+
+record(mbbo, "$(P)ALARM1_ST_ER_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 5 0x000F)")
+    field(DESC, "Alarm 1 state error")
+    field("ZRST", "OK")
+    field("ONST", "Errored")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+
+}
+
+
+## Parameter 27: Alarm 1 state LED. 
+record(mbbi, "$(P)ALARM1_LED_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 6 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Alarm 1 state LED")
+    
+    field("ZRST", "Off")
+    field("ONST", "On")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+
+}
+
+record(mbbo, "$(P)ALARM1_LED_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 6 0x000F)")
+    field(DESC, "Alarm 1 state LED")
+    field("ZRST", "Off")
+    field("ONST", "On")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+
+}
+
+
+## Parameter 30: Alarm 1 setpoint prot. User cannot modify setpoint
+record(mbbi, "$(P)ALARM1_SP_PROT_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 9 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Alarm 1 setpoint prot")
+    
+    field("ZRST", "Free")
+    field("ONST", "Locked")
+    field("TWST", "Locked, Hidden")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+record(mbbo, "$(P)ALARM1_SP_PROT_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 9 0x000F)")
+    field(DESC, "Alarm 1 setpoint prot")
+    field("ZRST", "Free")
+    field("ONST", "Locked")
+    field("TWST", "Locked, Hidden")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+
+## Parameter 31: Alarm 2 operating mode. Use $(P)PARAMETER31 for Timer 1-2 Warning Expiring (16)
+record(mbbi, "$(P)ALARM2_OP_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 10 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Alarm 2 operating mode")
+    
+    field("ZRST", "Disabled")
+    field("ONST", "Absolute Alarm")
+    field("TWST", "Band Alarm")
+    field("THST", "High Deviation")
+    field("FRST", "Low Deviation")
+    field("FVST", "Absolute Command")
+    field("SXST", "Start/Run Active")
+    field("SVST", "Cooling")
+    field("EIST", "T1 Start Alarm")
+    field("NIST", "T1 End Alarm")
+    field("TEST", "T1 Warn Expire")
+    field("ELST", "T2 Start Alarm")
+    field("TVST", "T2 End Alarm")
+    field("TTST", "T2 Warn Expire")
+    field("FTST", "T1-2 Start Alarm")
+    field("FFST", "T1-2 End Alarm")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+    field("EIVL", "8")
+    field("NIVL", "9")
+    field("TEVL", "10")
+    field("ELVL", "11")
+    field("TVVL", "12")
+    field("TTVL", "13")
+    field("FTVL", "14")
+    field("FFVL", "15")
+
+}
+
+record(mbbo, "$(P)ALARM2_OP_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 10 0x000F)")
+    field(DESC, "Alarm 2 operating mode")
+    field("ZRST", "Disabled")
+    field("ONST", "Absolute Alarm")
+    field("TWST", "Band Alarm")
+    field("THST", "High Deviation")
+    field("FRST", "Low Deviation")
+    field("FVST", "Absolute Command")
+    field("SXST", "Start/Run Active")
+    field("SVST", "Cooling")
+    field("EIST", "T1 Start Alarm")
+    field("NIST", "T1 End Alarm")
+    field("TEST", "T1 Warn Expire")
+    field("ELST", "T2 Start Alarm")
+    field("TVST", "T2 End Alarm")
+    field("TTST", "T2 Warn Expire")
+    field("FTST", "T1-2 Start Alarm")
+    field("FFST", "T1-2 End Alarm")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+    field("EIVL", "8")
+    field("NIVL", "9")
+    field("TEVL", "10")
+    field("ELVL", "11")
+    field("TVVL", "12")
+    field("TTVL", "13")
+    field("FTVL", "14")
+    field("FFVL", "15")
+
+}
+
+
+## Parameter 32: Alarm 2 state output. Output contact and intervention type
+record(mbbi, "$(P)ALARM2_ST_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 11 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Alarm 2 state output")
+    
+    field("ZRST", "N.O. Start")
+    field("ONST", "N.C. Start")
+    field("TWST", "N.O. Threshold")
+    field("THST", "N.C. Threshold")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+
+}
+
+record(mbbo, "$(P)ALARM2_ST_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 11 0x000F)")
+    field(DESC, "Alarm 2 state output")
+    field("ZRST", "N.O. Start")
+    field("ONST", "N.C. Start")
+    field("TWST", "N.O. Threshold")
+    field("THST", "N.C. Threshold")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+
+}
+
+
+## Parameter 33: Alarm 2 reset. Type of reset contact
+record(mbbi, "$(P)ALARM2_RESET_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 12 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Alarm 2 reset")
+    
+    field("ZRST", "Automatic reset")
+    field("ONST", "Manual Reset")
+    field("TWST", "Manual Stored")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+record(mbbo, "$(P)ALARM2_RESET_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 12 0x000F)")
+    field(DESC, "Alarm 2 reset")
+    field("ZRST", "Automatic reset")
+    field("ONST", "Manual Reset")
+    field("TWST", "Manual Stored")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+
+## Parameter 34: Alarm 2 state error. 
+record(mbbi, "$(P)ALARM2_ST_ER_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 13 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Alarm 2 state error")
+    
+    field("ZRST", "On")
+    field("ONST", "Off")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+
+}
+
+record(mbbo, "$(P)ALARM2_ST_ER_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 13 0x000F)")
+    field(DESC, "Alarm 2 state error")
+    field("ZRST", "On")
+    field("ONST", "Off")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+
+}
+
+
+## Parameter 35: Alarm 2 state LED. 
+record(mbbi, "$(P)ALARM2_LED_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 14 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Alarm 2 state LED")
+    
+    field("ZRST", "Off")
+    field("ONST", "On")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+
+}
+
+record(mbbo, "$(P)ALARM2_LED_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 14 0x000F)")
+    field(DESC, "Alarm 2 state LED")
+    field("ZRST", "Off")
+    field("ONST", "On")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+
+}
+
+
+## Parameter 38: Alarm 2 setpoint prot. User cannot modify setpoint
+record(mbbi, "$(P)ALARM2_SP_PROT_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 17 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Alarm 2 setpoint prot")
+    
+    field("ZRST", "Free")
+    field("ONST", "Locked")
+    field("TWST", "Locked, Hidden")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+record(mbbo, "$(P)ALARM2_SP_PROT_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 17 0x000F)")
+    field(DESC, "Alarm 2 setpoint prot")
+    field("ZRST", "Free")
+    field("ONST", "Locked")
+    field("TWST", "Locked, Hidden")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+
+## Parameter 39: Cooling fluid. Heating/cooling PID fluid
+record(mbbi, "$(P)COOLING_FLUID_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 18 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Cooling fluid")
+    
+    field("ZRST", "Air")
+    field("ONST", "Oil")
+    field("TWST", "Water")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+record(mbbo, "$(P)COOLING_FLUID_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 18 0x000F)")
+    field(DESC, "Cooling fluid")
+    field("ZRST", "Air")
+    field("ONST", "Oil")
+    field("TWST", "Water")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+

@@ -1,0 +1,494 @@
+
+## Parameter 44: Conversion frequency. ADC conversion freq
+record(mbbi, "$(P)CONV_HZ_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 3 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Conversion frequency")
+    
+    field("ZRST", "242 Hz")
+    field("ONST", "123 Hz")
+    field("TWST", "62 Hz")
+    field("THST", "50 Hz")
+    field("FRST", "39 Hz")
+    field("FVST", "33.2 Hz")
+    field("SXST", "19.6 Hz")
+    field("SVST", "16.7 Hz")
+    field("EIST", "12.5 Hz")
+    field("NIST", "10 Hz")
+    field("TEST", "8.33 Hz")
+    field("ELST", "6.25 Hz")
+    field("TVST", "4.17 Hz")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+    field("EIVL", "8")
+    field("NIVL", "9")
+    field("TEVL", "10")
+    field("ELVL", "11")
+    field("TVVL", "12")
+
+}
+
+record(mbbo, "$(P)CONV_HZ_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 3 0x000F)")
+    field(DESC, "Conversion frequency")
+    field("ZRST", "242 Hz")
+    field("ONST", "123 Hz")
+    field("TWST", "62 Hz")
+    field("THST", "50 Hz")
+    field("FRST", "39 Hz")
+    field("FVST", "33.2 Hz")
+    field("SXST", "19.6 Hz")
+    field("SVST", "16.7 Hz")
+    field("EIST", "12.5 Hz")
+    field("NIST", "10 Hz")
+    field("TEST", "8.33 Hz")
+    field("ELST", "6.25 Hz")
+    field("TVST", "4.17 Hz")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+    field("EIVL", "8")
+    field("NIVL", "9")
+    field("TEVL", "10")
+    field("ELVL", "11")
+    field("TVVL", "12")
+
+}
+
+
+## Parameter 45: Visualization filter. Display refresh modification
+record(mbbi, "$(P)VIS_FILTER_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 4 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Visualization filter")
+    
+    field("ZRST", "Disabled")
+    field("ONST", "Pitchfork")
+    field("TWST", "First order")
+    field("THST", "1st w/ pitchfork")
+    field("FRST", "2 samples mean")
+    field("FVST", "3 samples mean")
+    field("SXST", "4 samples mean")
+    field("SVST", "5 samples mean")
+    field("EIST", "6 samples mean")
+    field("NIST", "7 samples mean")
+    field("TEST", "8 samples mean")
+    field("ELST", "9 samples mean")
+    field("TVST", "10 samples mean")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+    field("EIVL", "8")
+    field("NIVL", "9")
+    field("TEVL", "10")
+    field("ELVL", "11")
+    field("TVVL", "12")
+
+}
+
+record(mbbo, "$(P)VIS_FILTER_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 4 0x000F)")
+    field(DESC, "Visualization filter")
+    field("ZRST", "Disabled")
+    field("ONST", "Pitchfork")
+    field("TWST", "First order")
+    field("THST", "1st w/ pitchfork")
+    field("FRST", "2 samples mean")
+    field("FVST", "3 samples mean")
+    field("SXST", "4 samples mean")
+    field("SVST", "5 samples mean")
+    field("EIST", "6 samples mean")
+    field("NIST", "7 samples mean")
+    field("TEST", "8 samples mean")
+    field("ELST", "9 samples mean")
+    field("TVST", "10 samples mean")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+    field("EIVL", "8")
+    field("NIVL", "9")
+    field("TEVL", "10")
+    field("ELVL", "11")
+    field("TVVL", "12")
+
+}
+
+
+## Parameter 46: Tuning type selection. 
+record(mbbi, "$(P)TUNE_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 5 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Tuning type selection")
+    
+    field("ZRST", "Disabled")
+    field("ONST", "Auto")
+    field("TWST", "Manual")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+record(mbbo, "$(P)TUNE_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 5 0x000F)")
+    field(DESC, "Tuning type selection")
+    field("ZRST", "Disabled")
+    field("ONST", "Auto")
+    field("TWST", "Manual")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+
+## Parameter 48: Operating mode. 
+record(mbbi, "$(P)OP_MODE_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 7 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Operating mode")
+    
+    field("ZRST", "Controller")
+    field("ONST", "Programmed cycle")
+    field("TWST", "2 thresh sw")
+    field("THST", "2 thresh sw imp")
+    field("FRST", "3 thresh sw imp")
+    field("FVST", "4 thresh sw imp")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+
+}
+
+record(mbbo, "$(P)OP_MODE_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 7 0x000F)")
+    field(DESC, "Operating mode")
+    field("ZRST", "Controller")
+    field("ONST", "Programmed cycle")
+    field("TWST", "2 thresh sw")
+    field("THST", "2 thresh sw imp")
+    field("FRST", "3 thresh sw imp")
+    field("FVST", "4 thresh sw imp")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+
+}
+
+
+## Parameter 49: Auto/manual. 
+record(mbbi, "$(P)AUTO_MODE_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 8 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Auto/manual")
+    
+    field("ZRST", "Disabled")
+    field("ONST", "Enabled")
+    field("TWST", "Enabled stored")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+record(mbbo, "$(P)AUTO_MODE_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 8 0x000F)")
+    field(DESC, "Auto/manual")
+    field("ZRST", "Disabled")
+    field("ONST", "Enabled")
+    field("TWST", "Enabled stored")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+
+## Parameter 50: Digital input. 
+record(mbbi, "$(P)DIG_INPUT_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 9 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Digital input")
+    
+    field("ZRST", "Disabled")
+    field("ONST", "Start/stop")
+    field("TWST", "Run N.O.")
+    field("THST", "Run N.C.")
+    field("FRST", "Lock conv N.O.")
+    field("FVST", "Lock conv N.C.")
+    field("SXST", "Tune > manual")
+    field("SVST", "Auto impulse")
+    field("EIST", "Auto contact")
+    field("NIST", "Timer 1")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+    field("EIVL", "8")
+    field("NIVL", "9")
+
+}
+
+record(mbbo, "$(P)DIG_INPUT_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 9 0x000F)")
+    field(DESC, "Digital input")
+    field("ZRST", "Disabled")
+    field("ONST", "Start/stop")
+    field("TWST", "Run N.O.")
+    field("THST", "Run N.C.")
+    field("FRST", "Lock conv N.O.")
+    field("FVST", "Lock conv N.C.")
+    field("SXST", "Tune > manual")
+    field("SVST", "Auto impulse")
+    field("EIST", "Auto contact")
+    field("NIST", "Timer 1")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+    field("EIVL", "8")
+    field("NIVL", "9")
+
+}
+
+
+## Parameter 53: User menu cycle. 
+record(mbbi, "$(P)USER_MENU_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 12 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "User menu cycle")
+    
+    field("ZRST", "Disabled")
+    field("ONST", "Rising grad")
+    field("TWST", "Maint time")
+    field("THST", "Grad/maint")
+    field("FRST", "Falling grad")
+    field("FVST", "Ris/fall grad")
+    field("SXST", "Fall gr/maint")
+    field("SVST", "All")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+
+}
+
+record(mbbo, "$(P)USER_MENU_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 12 0x000F)")
+    field(DESC, "User menu cycle")
+    field("ZRST", "Disabled")
+    field("ONST", "Rising grad")
+    field("TWST", "Maint time")
+    field("THST", "Grad/maint")
+    field("FRST", "Falling grad")
+    field("FVST", "Ris/fall grad")
+    field("SXST", "Fall gr/maint")
+    field("SVST", "All")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+
+}
+
+
+## Parameter 54: Visualization type. 
+record(mbbi, "$(P)VIS_TYPE_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 13 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Visualization type")
+    
+    field("ZRST", "1 proc 2 SP")
+    field("ONST", "1 proc 2 hide")
+    field("TWST", "1 SP, 2 proc")
+    field("THST", "1 SP, 2 hide")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+
+}
+
+record(mbbo, "$(P)VIS_TYPE_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 13 0x000F)")
+    field(DESC, "Visualization type")
+    field("ZRST", "1 proc 2 SP")
+    field("ONST", "1 proc 2 hide")
+    field("TWST", "1 SP, 2 proc")
+    field("THST", "1 SP, 2 hide")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+
+}
+
+
+## Parameter 55: Degree. 
+record(mbbi, "$(P)DEGREES_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 14 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Degree")
+    
+    field("ZRST", "Celsius")
+    field("ONST", "Fahrenheit")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+
+}
+
+record(mbbo, "$(P)DEGREES_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 14 0x000F)")
+    field(DESC, "Degree")
+    field("ZRST", "Celsius")
+    field("ONST", "Fahrenheit")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+
+}
+
+
+## Parameter 56: Baud rate. 
+record(mbbi, "$(P)BAUD_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 15 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Baud rate")
+    
+    field("ZRST", "4800")
+    field("ONST", "9600")
+    field("TWST", "19200")
+    field("THST", "28800")
+    field("FRST", "38400")
+    field("FVST", "57600")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+
+}
+
+record(mbbo, "$(P)BAUD_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 15 0x000F)")
+    field(DESC, "Baud rate")
+    field("ZRST", "4800")
+    field("ONST", "9600")
+    field("TWST", "19200")
+    field("THST", "28800")
+    field("FRST", "38400")
+    field("FVST", "57600")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+
+}
+
+
+## Parameter 59: Master mode. 
+record(mbbi, "$(P)MASTER_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 18 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Master mode")
+    
+    field("ZRST", "Disable")
+    field("ONST", "Write process")
+    field("TWST", "R/W command SP")
+    field("THST", "Wr out percent")
+    field("FRST", "R/W alarm 1 SP")
+    field("FVST", "Read process")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+
+}
+
+record(mbbo, "$(P)MASTER_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 18 0x000F)")
+    field(DESC, "Master mode")
+    field("ZRST", "Disable")
+    field("ONST", "Write process")
+    field("TWST", "R/W command SP")
+    field("THST", "Wr out percent")
+    field("FRST", "R/W alarm 1 SP")
+    field("FVST", "Read process")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+
+}
+

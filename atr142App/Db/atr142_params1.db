@@ -1,0 +1,262 @@
+
+## Parameter 1: Command Output. 
+record(mbbi, "$(P)COMMAND_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 0 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Command Output")
+    
+    field("ZRST", "Q2 (Q1/SSR)")
+    field("ONST", "Q1 (Q2/SSR)")
+    field("TWST", "SSR (Q1/Q2)")
+    field("THST", "Q1/Q2 (SSR/)")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+
+}
+
+record(mbbo, "$(P)COMMAND_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 0 0x000F)")
+    field(DESC, "Command Output")
+    field("ZRST", "Q2 (Q1/SSR)")
+    field("ONST", "Q1 (Q2/SSR)")
+    field("TWST", "SSR (Q1/Q2)")
+    field("THST", "Q1/Q2 (SSR/)")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+
+}
+
+
+## Parameter 2: Sensor. Use $(P)PARAM2 for sensors > 15
+record(mbbi, "$(P)SENSOR_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 1 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Sensor")
+    
+    field("ZRST", "Tc-K")
+    field("ONST", "Tc-S")
+    field("TWST", "Tc-R")
+    field("THST", "Tc-J")
+    field("FRST", "PT100")
+    field("FVST", "PT100")
+    field("SXST", "NI100")
+    field("SVST", "NTC10K")
+    field("EIST", "PTC1K")
+    field("NIST", "PT500")
+    field("TEST", "PT1000")
+    field("ELST", "0...10Volt")
+    field("TVST", "0...20mA")
+    field("TTST", "4...20mA")
+    field("FTST", "0...40mVolt")
+    field("FFST", "Potenz. 6KOhm")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+    field("EIVL", "8")
+    field("NIVL", "9")
+    field("TEVL", "10")
+    field("ELVL", "11")
+    field("TVVL", "12")
+    field("TTVL", "13")
+    field("FTVL", "14")
+    field("FFVL", "15")
+
+}
+
+record(mbbo, "$(P)SENSOR_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 1 0x000F)")
+    field(DESC, "Sensor")
+    field("ZRST", "Tc-K")
+    field("ONST", "Tc-S")
+    field("TWST", "Tc-R")
+    field("THST", "Tc-J")
+    field("FRST", "PT100")
+    field("FVST", "PT100")
+    field("SXST", "NI100")
+    field("SVST", "NTC10K")
+    field("EIST", "PTC1K")
+    field("NIST", "PT500")
+    field("TEST", "PT1000")
+    field("ELST", "0...10Volt")
+    field("TVST", "0...20mA")
+    field("TTST", "4...20mA")
+    field("FTST", "0...40mVolt")
+    field("FFST", "Potenz. 6KOhm")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("SVVL", "7")
+    field("EIVL", "8")
+    field("NIVL", "9")
+    field("TEVL", "10")
+    field("ELVL", "11")
+    field("TVVL", "12")
+    field("TTVL", "13")
+    field("FTVL", "14")
+    field("FFVL", "15")
+
+}
+
+
+## Parameter 8: Latch on function. 
+record(mbbi, "$(P)LATCH_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 7 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Latch on function")
+    
+    field("ZRST", "Disabled")
+    field("ONST", "Standard")
+    field("TWST", "Virt zero stored")
+    field("THST", "Virt zero init")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+
+}
+
+record(mbbo, "$(P)LATCH_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 7 0x000F)")
+    field(DESC, "Latch on function")
+    field("ZRST", "Disabled")
+    field("ONST", "Standard")
+    field("TWST", "Virt zero stored")
+    field("THST", "Virt zero init")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+
+}
+
+
+## Parameter 11: Action type. Last option: "If process is above setpoint, output is disabled (Heating)"
+record(mbbi, "$(P)ACTION_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 10 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Action type")
+    
+    field("ZRST", "Heating")
+    field("ONST", "Cooling")
+    field("TWST", "Heat below SP")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+record(mbbo, "$(P)ACTION_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 10 0x000F)")
+    field(DESC, "Action type")
+    field("ZRST", "Heating")
+    field("ONST", "Cooling")
+    field("TWST", "Heat below SP")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+
+## Parameter 12: Command reset. 
+record(mbbi, "$(P)CMD_RESET_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 11 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Command reset")
+    
+    field("ZRST", "Automatic reset")
+    field("ONST", "Manual Reset")
+    field("TWST", "Manual Stored")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+record(mbbo, "$(P)CMD_RESET_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 11 0x000F)")
+    field(DESC, "Command reset")
+    field("ZRST", "Automatic reset")
+    field("ONST", "Manual Reset")
+    field("TWST", "Manual Stored")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+
+}
+
+
+## Parameter 13: Command errored. 
+record(mbbi, "$(P)CMD_ERROR_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 12 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Command errored")
+    
+    field("ZRST", "OK")
+    field("ONST", "Errored")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+
+}
+
+record(mbbo, "$(P)CMD_ERROR_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 12 0x000F)")
+    field(DESC, "Command errored")
+    field("ZRST", "OK")
+    field("ONST", "Errored")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+
+}
+
+
+## Parameter 17: Command Setpoint Protection. 
+record(mbbi, "$(P)SET_PROTECT_IN") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT)_R$(BASE) 16 0x000F)")
+    field(SCAN, "I/O Intr")
+    field(DESC, "Command Setpoint Protection")
+    
+    field("ZRST", "Default")
+    field("ONST", "Locked")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+
+}
+
+record(mbbo, "$(P)SET_PROTECT_OUT") {
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(PORT)_W$(BASE) 16 0x000F)")
+    field(DESC, "Command Setpoint Protection")
+    field("ZRST", "Default")
+    field("ONST", "Locked")
+    field("ZRVL", "0")
+    field("ONVL", "1")
+
+}
+

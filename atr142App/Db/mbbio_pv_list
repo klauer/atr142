@@ -1,0 +1,32 @@
+1	Command Output	$(P)COMMAND_IN	$(P)COMMAND_OUT
+2	Sensor	$(P)SENSOR_IN	$(P)SENSOR_OUT
+8	Latch on function	$(P)LATCH_IN	$(P)LATCH_OUT
+11	Action type	$(P)ACTION_IN	$(P)ACTION_OUT
+12	Command reset	$(P)CMD_RESET_IN	$(P)CMD_RESET_OUT
+13	Command errored	$(P)CMD_ERROR_IN	$(P)CMD_ERROR_OUT
+17	Command Setpoint Protection	$(P)SET_PROTECT_IN	$(P)SET_PROTECT_OUT
+23	Alarm 1 operating mode	$(P)ALARM1_OP_IN	$(P)ALARM1_OP_OUT
+24	Alarm 1 state output	$(P)ALARM1_ST_IN	$(P)ALARM1_ST_OUT
+25	Alarm 1 reset	$(P)ALARM1_RESET_IN	$(P)ALARM1_RESET_OUT
+26	Alarm 1 state error	$(P)ALARM1_ST_ER_IN	$(P)ALARM1_ST_ER_OUT
+27	Alarm 1 state LED	$(P)ALARM1_LED_IN	$(P)ALARM1_LED_OUT
+30	Alarm 1 setpoint prot	$(P)ALARM1_SP_PROT_IN	$(P)ALARM1_SP_PROT_OUT
+31	Alarm 2 operating mode	$(P)ALARM2_OP_IN	$(P)ALARM2_OP_OUT
+32	Alarm 2 state output	$(P)ALARM2_ST_IN	$(P)ALARM2_ST_OUT
+33	Alarm 2 reset	$(P)ALARM2_RESET_IN	$(P)ALARM2_RESET_OUT
+34	Alarm 2 state error	$(P)ALARM2_ST_ER_IN	$(P)ALARM2_ST_ER_OUT
+35	Alarm 2 state LED	$(P)ALARM2_LED_IN	$(P)ALARM2_LED_OUT
+38	Alarm 2 setpoint prot	$(P)ALARM2_SP_PROT_IN	$(P)ALARM2_SP_PROT_OUT
+39	Cooling fluid	$(P)COOLING_FLUID_IN	$(P)COOLING_FLUID_OUT
+44	Conversion frequency	$(P)CONV_HZ_IN	$(P)CONV_HZ_OUT
+45	Visualization filter	$(P)VIS_FILTER_IN	$(P)VIS_FILTER_OUT
+46	Tuning type selection	$(P)TUNE_IN	$(P)TUNE_OUT
+48	Operating mode	$(P)OP_MODE_IN	$(P)OP_MODE_OUT
+49	Auto/manual	$(P)AUTO_MODE_IN	$(P)AUTO_MODE_OUT
+50	Digital input	$(P)DIG_INPUT_IN	$(P)DIG_INPUT_OUT
+53	User menu cycle	$(P)USER_MENU_IN	$(P)USER_MENU_OUT
+54	Visualization type	$(P)VIS_TYPE_IN	$(P)VIS_TYPE_OUT
+55	Degree	$(P)DEGREES_IN	$(P)DEGREES_OUT
+56	Baud rate	$(P)BAUD_IN	$(P)BAUD_OUT
+59	Master mode	$(P)MASTER_IN	$(P)MASTER_OUT
+63	Timer function	$(P)TIMER_FCN_IN	$(P)TIMER_FCN_OUT

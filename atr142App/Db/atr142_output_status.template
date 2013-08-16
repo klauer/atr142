@@ -1,0 +1,49 @@
+record(mbbiDirect, "$(P)$(R)") {
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT) $(OFFSET) 0x0007)")
+    field(SCAN, "$(SCAN)")
+    #field(TPRO, 1)
+    field(FLNK, "$(P)$(R)_FANOUT")
+}
+
+record(fanout, "$(P)$(R)_FANOUT") {
+    field(LNK1, "$(P)Q1_RELAY_IN")
+    field(LNK2, "$(P)Q2_RELAY_IN")
+    field(LNK3, "$(P)SSR_IN")
+}
+
+record(bi, "$(P)Q1_RELAY_IN") {
+    field(INP, "$(P)$(R).B0")
+    #field(TPRO, 1)
+
+    field(ONAM, "Q1 relay on")
+    field(OSV, "NO_ALARM")
+
+    field(ZNAM, "Q1 relay off")
+    field(ZSV, "NO_ALARM")
+
+}
+
+record(bi, "$(P)Q2_RELAY_IN") {
+    field(INP, "$(P)$(R).B1")
+    #field(TPRO, 1)
+
+    field(ONAM, "Q2 relay on")
+    field(OSV, "NO_ALARM")
+
+    field(ZNAM, "Q2 relay off")
+    field(ZSV, "NO_ALARM")
+
+}
+
+record(bi, "$(P)SSR_IN") {
+    field(INP, "$(P)$(R).B2")
+    #field(TPRO, 1)
+
+    field(ONAM, "SSR on")
+    field(OSV, "NO_ALARM")
+
+    field(ZNAM, "SSR off")
+    field(ZSV, "NO_ALARM")
+
+}
