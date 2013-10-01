@@ -18,34 +18,34 @@ modbusInterposeConfig("$(ASYN_PORT)", 1, 0, 4)
 
 #### Read ports ####
 ## Global parameters
-drvModbusAsynConfigure("$(MODBUS_PORT)_R0"   , "$(ASYN_PORT)", 1, 3,    0, 20, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_R50"  , "$(ASYN_PORT)", 1, 3,   50,  2, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_R500" , "$(ASYN_PORT)", 1, 3,  500,  1, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_R0"   , "$(ASYN_PORT)", $(SLAVE_ADDR), 3,    0, 20, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_R50"  , "$(ASYN_PORT)", $(SLAVE_ADDR), 3,   50,  2, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_R500" , "$(ASYN_PORT)", $(SLAVE_ADDR), 3,  500,  1, 0, 500, "ATR142")
 
 ## Setpoints, alarms, status
-drvModbusAsynConfigure("$(MODBUS_PORT)_R1000", "$(ASYN_PORT)", 1, 3, 1000, 20, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_R1100", "$(ASYN_PORT)", 1, 3, 1100, 12, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_R1000", "$(ASYN_PORT)", $(SLAVE_ADDR), 3, 1000, 20, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_R1100", "$(ASYN_PORT)", $(SLAVE_ADDR), 3, 1100, 12, 0, 500, "ATR142")
 
 ## Parameters
-drvModbusAsynConfigure("$(MODBUS_PORT)_R2001", "$(ASYN_PORT)", 1, 3, 2001, 20, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_R2021", "$(ASYN_PORT)", 1, 3, 2021, 20, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_R2041", "$(ASYN_PORT)", 1, 3, 2041, 20, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_R2061", "$(ASYN_PORT)", 1, 3, 2061,  4, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_R2001", "$(ASYN_PORT)", $(SLAVE_ADDR), 3, 2001, 20, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_R2021", "$(ASYN_PORT)", $(SLAVE_ADDR), 3, 2021, 20, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_R2041", "$(ASYN_PORT)", $(SLAVE_ADDR), 3, 2041, 20, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_R2061", "$(ASYN_PORT)", $(SLAVE_ADDR), 3, 2061,  4, 0, 500, "ATR142")
 
 ## ASCII Display, front panel-related
-drvModbusAsynConfigure("$(MODBUS_PORT)_R3000", "$(ASYN_PORT)", 1, 3, 3000, 20, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_R3020", "$(ASYN_PORT)", 1, 3, 3020,  2, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_R3000", "$(ASYN_PORT)", $(SLAVE_ADDR), 3, 3000, 20, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_R3020", "$(ASYN_PORT)", $(SLAVE_ADDR), 3, 3020,  2, 0, 500, "ATR142")
 
 #### Write ports ####
-drvModbusAsynConfigure("$(MODBUS_PORT)_W0"   , "$(ASYN_PORT)", 1, 6,    0, 20, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_W50"  , "$(ASYN_PORT)", 1, 6,   50,  2, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_W500" , "$(ASYN_PORT)", 1, 6,  500,  1, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_W1000", "$(ASYN_PORT)", 1, 6, 1000, 20, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_W3000", "$(ASYN_PORT)", 1, 6, 3000, 20, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_W2001", "$(ASYN_PORT)", 1, 6, 2001, 20, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_W2021", "$(ASYN_PORT)", 1, 6, 2021, 20, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_W2041", "$(ASYN_PORT)", 1, 6, 2041, 20, 0, 500, "ATR142")
-drvModbusAsynConfigure("$(MODBUS_PORT)_W2061", "$(ASYN_PORT)", 1, 6, 2061,  4, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_W0"   , "$(ASYN_PORT)", $(SLAVE_ADDR), 6,    0, 20, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_W50"  , "$(ASYN_PORT)", $(SLAVE_ADDR), 6,   50,  2, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_W500" , "$(ASYN_PORT)", $(SLAVE_ADDR), 6,  500,  1, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_W1000", "$(ASYN_PORT)", $(SLAVE_ADDR), 6, 1000, 20, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_W3000", "$(ASYN_PORT)", $(SLAVE_ADDR), 6, 3000, 20, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_W2001", "$(ASYN_PORT)", $(SLAVE_ADDR), 6, 2001, 20, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_W2021", "$(ASYN_PORT)", $(SLAVE_ADDR), 6, 2021, 20, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_W2041", "$(ASYN_PORT)", $(SLAVE_ADDR), 6, 2041, 20, 0, 500, "ATR142")
+drvModbusAsynConfigure("$(MODBUS_PORT)_W2061", "$(ASYN_PORT)", $(SLAVE_ADDR), 6, 2061,  4, 0, 500, "ATR142")
 
 ## Load ATR142 records
 dbLoadRecords("$(TOP)/db/atr142.db", "P=$(PREFIX):,PORT=$(MODBUS_PORT)")
