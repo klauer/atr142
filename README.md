@@ -59,18 +59,25 @@ Installation
         ```
 
     4. Set the slave address according to what was set in the front panel:
+        ```
         # slaveAddress = 1 (device default is 254)
         epicsEnvSet("SLAVE_ADDR",  "1")
+        ```
 
     5. For each atr142 configured, Set PREFIX, MODBUS_PORT, ASYN_PORT, SLAVE_ADDR and run load_atr142.cmd for each device:
+        ```
         < load_atr142.cmd
+        ```
 
 4. Go to the top directory and `make`
 5. If all goes well:
-
-    `cd iocBoot/iocatr142`  
-    `chmod +x st.cmd`  
-    `./st.cmd`  
+    ```
+    $ cd iocBoot/iocatr142
+    $ chmod +x st.cmd
+    $ ./st.cmd
+    ```
 6. Run EDM:
-    `export EDMDATAFILES=$TOP/op/edl:$EDMDATAFILES`
-    `edm -x -m "P=E1:ATR142:" atr142_all`
+    ```
+    $ export EDMDATAFILES=$TOP/op/edl:$EDMDATAFILES
+    $ edm -x -m "P=E1:ATR142:" atr142_all
+    ```
