@@ -22,7 +22,7 @@ atr142_DBD += system.dbd
 atr142_DBD += asyn.dbd
 atr142_DBD += drvAsynIPPort.dbd
 atr142_DBD += drvAsynSerialPort.dbd
-atr142_DBD += modbus.dbd
+atr142_DBD += modbusSupport.dbd
 atr142_DBD += mbbiDirectRecord.dbd
 
 # Add all the support libraries needed by this IOC

@@ -1,18 +1,14 @@
-#!../../bin/linux-x86/atr142
+#!../../bin/linux-x86_64/atr142
 
 < envPaths
 epicsEnvSet("ENGINEER", "$(ENGINEER=unset x1234)")
 epicsEnvSet("LOCATION", "$(LOCATION=unset)")
-epicsEnvSet("PREFIX", "$(PREFIX=E1:ATR142)")
-epicsEnvSet("ADMIN_P", "$(ADMIN_P=$(PREFIX):IOC)")
+epicsEnvSet("ADMIN_P", "XF:03IDA-CT{IOC:ATR142}")
 ## for tcp/ip:
-epicsEnvSet("ATR142_HOST", "$(ATR142_HOST=10.0.0.10)")
-epicsEnvSet("ATR142_PORT", "$(ATR142_PORT=4014)")
+epicsEnvSet("ATR142_HOST", "$(ATR142_HOST=10.3.2.52)")
+epicsEnvSet("ATR142_PORT", "$(ATR142_PORT=4006)")
 epicsEnvSet("ASYN_PORT",   "$(ASYN_PORT=ATR142)")
 epicsEnvSet("MODBUS_PORT", "$(MODBUS_PORT=MOD_$(ASYN_PORT))")
-
-# slaveAddress = 1 (device default is 254)
-epicsEnvSet("SLAVE_ADDR",  "1")
 
 ## for serial:
 #epicsEnvSet("ATR142_SERIALPORT", "$(ATR142_SERIALPORT=/dev/ttyS1)")
@@ -37,6 +33,19 @@ drvAsynIPPortConfigure("$(ASYN_PORT)", "$(ATR142_HOST):$(ATR142_PORT)", 0, 0, 1)
 # asynSetOption("$(ASYN_PORT)",0,"stop","1")
 
 ## Set PREFIX, MODBUS_PORT, ASYN_PORT, SLAVE_ADDR and run load_atr142.cmd for each device:
+# slaveAddress = 1 (device default is 254)
+
+# epicsEnvSet("PREFIX", "XF:03IDA-CT{HDCMHeater:3}")
+# epicsEnvSet("SLAVE_ADDR", "3")
+# epicsEnvSet("MODBUS_PORT", "ATR3")
+# < load_atr142.cmd
+# epicsEnvSet("PREFIX", "XF:03IDA-CT{HDCMHeater:4}")
+# epicsEnvSet("SLAVE_ADDR",  "4")
+# epicsEnvSet("MODBUS_PORT", "ATR4")
+# < load_atr142.cmd
+epicsEnvSet("PREFIX", "XF:03IDA-CT{HDCMHeater:5}")
+epicsEnvSet("SLAVE_ADDR",  "5")
+epicsEnvSet("MODBUS_PORT", "ATR5")
 < load_atr142.cmd
 
 ## autosave probably not needed:
