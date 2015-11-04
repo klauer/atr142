@@ -3,24 +3,24 @@ record(mbbiDirect, "$(P)$(R)") {
     field(INP, "@asynMask($(PORT) $(OFFSET) 0x000F)")
     field(SCAN, "$(SCAN)")
     #field(TPRO, 1)
-    field(FLNK, "$(P)$(R)_FANOUT")
+    field(FLNK, "$(P)$(R)Fanout_")
 }
 
-record(fanout, "$(P)$(R)_FANOUT") {
-    field(LNK1, "$(P)EEPROM_WRITE_ERROR")
-    field(LNK2, "$(P)EEPROM_READ_ERROR")
-    field(LNK3, "$(P)CJ_ERROR")
-    field(LNK4, "$(P)GENERIC_ERROR")
-    field(LNK5, "$(P)HARDWARE_ERROR")
-    field(LNK6, "$(P)MASTER_OFFLINE_ERROR")
-    field(FLNK, "$(P)$(R)_FANOUT_2")
+record(fanout, "$(P)$(R)Fanout_") {
+    field(LNK1, "$(P)EepromWriteError-I")
+    field(LNK2, "$(P)EepromReadError-I")
+    field(LNK3, "$(P)CjError-I")
+    field(LNK4, "$(P)GenericError-I")
+    field(LNK5, "$(P)HardwareError-I")
+    field(LNK6, "$(P)MasterOfflineError-I")
+    field(FLNK, "$(P)$(R)Fanout2_")
 }
 
-record(fanout, "$(P)$(R)_FANOUT_2") {
-    field(LNK1, "$(P)CALIBRATION_ERROR")
+record(fanout, "$(P)$(R)Fanout2_") {
+    field(LNK1, "$(P)CalibrationError-I")
 }
 
-record(bi, "$(P)EEPROM_WRITE_ERROR") {
+record(bi, "$(P)EepromWriteError-I") {
     field(INP, "$(P)$(R).B0")
     #field(TPRO, 1)
 
@@ -31,7 +31,7 @@ record(bi, "$(P)EEPROM_WRITE_ERROR") {
     field(ZSV, "NO_ALARM")
 
 }
-record(bi, "$(P)EEPROM_READ_ERROR") {
+record(bi, "$(P)EepromReadError-I") {
     field(INP, "$(P)$(R).B1")
     #field(TPRO, 1)
 
@@ -43,7 +43,7 @@ record(bi, "$(P)EEPROM_READ_ERROR") {
 
 }
 
-record(bi, "$(P)CJ_ERROR") {
+record(bi, "$(P)CjError-I") {
     field(INP, "$(P)$(R).B2")
     #field(TPRO, 1)
 
@@ -54,7 +54,7 @@ record(bi, "$(P)CJ_ERROR") {
     field(ZSV, "NO_ALARM")
 
 }
-record(bi, "$(P)GENERIC_ERROR") {
+record(bi, "$(P)GenericError-I") {
     field(INP, "$(P)$(R).B3")
     #field(TPRO, 1)
 
@@ -66,7 +66,7 @@ record(bi, "$(P)GENERIC_ERROR") {
 
 }
 
-record(bi, "$(P)HARDWARE_ERROR") {
+record(bi, "$(P)HardwareError-I") {
     field(INP, "$(P)$(R).B4")
     #field(TPRO, 1)
 
@@ -78,7 +78,7 @@ record(bi, "$(P)HARDWARE_ERROR") {
 
 }
 
-record(bi, "$(P)MASTER_OFFLINE_ERROR") {
+record(bi, "$(P)MasterOfflineError-I") {
     field(INP, "$(P)$(R).B5")
     #field(TPRO, 1)
 
@@ -90,7 +90,7 @@ record(bi, "$(P)MASTER_OFFLINE_ERROR") {
 
 }
 
-record(bi, "$(P)CALIBRATION_ERROR") {
+record(bi, "$(P)CalibrationError-I") {
     field(INP, "$(P)$(R).B6")
     #field(TPRO, 1)
 

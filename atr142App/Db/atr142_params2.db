@@ -1,6 +1,6 @@
 
 ## Parameter 23: Alarm 1 operating mode. Use $(P)PARAMETER23 for Timer 1-2 Warning Expiring (16)
-record(mbbi, "$(P)ALARM1_OP_IN") {
+record(mbbi, "$(P)Alarm1Op-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 2 0x000F)")
     field(SCAN, "I/O Intr")
@@ -41,7 +41,7 @@ record(mbbi, "$(P)ALARM1_OP_IN") {
 
 }
 
-record(mbbo, "$(P)ALARM1_OP_OUT") {
+record(mbbo, "$(P)Alarm1Op-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 2 0x000F)")
     field(DESC, "Alarm 1 operating mode")
@@ -82,7 +82,7 @@ record(mbbo, "$(P)ALARM1_OP_OUT") {
 
 
 ## Parameter 24: Alarm 1 state output. Output contact and intervention type
-record(mbbi, "$(P)ALARM1_ST_IN") {
+record(mbbi, "$(P)Alarm1St-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 3 0x000F)")
     field(SCAN, "I/O Intr")
@@ -99,7 +99,7 @@ record(mbbi, "$(P)ALARM1_ST_IN") {
 
 }
 
-record(mbbo, "$(P)ALARM1_ST_OUT") {
+record(mbbo, "$(P)Alarm1St-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 3 0x000F)")
     field(DESC, "Alarm 1 state output")
@@ -116,7 +116,7 @@ record(mbbo, "$(P)ALARM1_ST_OUT") {
 
 
 ## Parameter 25: Alarm 1 reset. Type of reset contact
-record(mbbi, "$(P)ALARM1_RESET_IN") {
+record(mbbi, "$(P)Alarm1Reset-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 4 0x000F)")
     field(SCAN, "I/O Intr")
@@ -131,7 +131,7 @@ record(mbbi, "$(P)ALARM1_RESET_IN") {
 
 }
 
-record(mbbo, "$(P)ALARM1_RESET_OUT") {
+record(mbbo, "$(P)Alarm1Reset-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 4 0x000F)")
     field(DESC, "Alarm 1 reset")
@@ -146,7 +146,7 @@ record(mbbo, "$(P)ALARM1_RESET_OUT") {
 
 
 ## Parameter 26: Alarm 1 state error. 
-record(mbbi, "$(P)ALARM1_ST_ER_IN") {
+record(mbbi, "$(P)Alarm1StEr-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 5 0x000F)")
     field(SCAN, "I/O Intr")
@@ -159,7 +159,7 @@ record(mbbi, "$(P)ALARM1_ST_ER_IN") {
 
 }
 
-record(mbbo, "$(P)ALARM1_ST_ER_OUT") {
+record(mbbo, "$(P)Alarm1StEr-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 5 0x000F)")
     field(DESC, "Alarm 1 state error")
@@ -172,7 +172,7 @@ record(mbbo, "$(P)ALARM1_ST_ER_OUT") {
 
 
 ## Parameter 27: Alarm 1 state LED. 
-record(mbbi, "$(P)ALARM1_LED_IN") {
+record(mbbi, "$(P)Alarm1Led-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 6 0x000F)")
     field(SCAN, "I/O Intr")
@@ -185,7 +185,7 @@ record(mbbi, "$(P)ALARM1_LED_IN") {
 
 }
 
-record(mbbo, "$(P)ALARM1_LED_OUT") {
+record(mbbo, "$(P)Alarm1Led-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 6 0x000F)")
     field(DESC, "Alarm 1 state LED")
@@ -198,7 +198,7 @@ record(mbbo, "$(P)ALARM1_LED_OUT") {
 
 
 ## Parameter 30: Alarm 1 setpoint prot. User cannot modify setpoint
-record(mbbi, "$(P)ALARM1_SP_PROT_IN") {
+record(mbbi, "$(P)Alarm1SpProt-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 9 0x000F)")
     field(SCAN, "I/O Intr")
@@ -213,7 +213,7 @@ record(mbbi, "$(P)ALARM1_SP_PROT_IN") {
 
 }
 
-record(mbbo, "$(P)ALARM1_SP_PROT_OUT") {
+record(mbbo, "$(P)Alarm1SpProt-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 9 0x000F)")
     field(DESC, "Alarm 1 setpoint prot")
@@ -228,7 +228,7 @@ record(mbbo, "$(P)ALARM1_SP_PROT_OUT") {
 
 
 ## Parameter 31: Alarm 2 operating mode. Use $(P)PARAMETER31 for Timer 1-2 Warning Expiring (16)
-record(mbbi, "$(P)ALARM2_OP_IN") {
+record(mbbi, "$(P)Alarm2Op-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 10 0x000F)")
     field(SCAN, "I/O Intr")
@@ -269,7 +269,7 @@ record(mbbi, "$(P)ALARM2_OP_IN") {
 
 }
 
-record(mbbo, "$(P)ALARM2_OP_OUT") {
+record(mbbo, "$(P)Alarm2Op-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 10 0x000F)")
     field(DESC, "Alarm 2 operating mode")
@@ -310,7 +310,7 @@ record(mbbo, "$(P)ALARM2_OP_OUT") {
 
 
 ## Parameter 32: Alarm 2 state output. Output contact and intervention type
-record(mbbi, "$(P)ALARM2_ST_IN") {
+record(mbbi, "$(P)Alarm2St-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 11 0x000F)")
     field(SCAN, "I/O Intr")
@@ -327,7 +327,7 @@ record(mbbi, "$(P)ALARM2_ST_IN") {
 
 }
 
-record(mbbo, "$(P)ALARM2_ST_OUT") {
+record(mbbo, "$(P)Alarm2St-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 11 0x000F)")
     field(DESC, "Alarm 2 state output")
@@ -344,7 +344,7 @@ record(mbbo, "$(P)ALARM2_ST_OUT") {
 
 
 ## Parameter 33: Alarm 2 reset. Type of reset contact
-record(mbbi, "$(P)ALARM2_RESET_IN") {
+record(mbbi, "$(P)Alarm2Reset-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 12 0x000F)")
     field(SCAN, "I/O Intr")
@@ -359,7 +359,7 @@ record(mbbi, "$(P)ALARM2_RESET_IN") {
 
 }
 
-record(mbbo, "$(P)ALARM2_RESET_OUT") {
+record(mbbo, "$(P)Alarm2Reset-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 12 0x000F)")
     field(DESC, "Alarm 2 reset")
@@ -374,7 +374,7 @@ record(mbbo, "$(P)ALARM2_RESET_OUT") {
 
 
 ## Parameter 34: Alarm 2 state error. 
-record(mbbi, "$(P)ALARM2_ST_ER_IN") {
+record(mbbi, "$(P)Alarm2StEr-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 13 0x000F)")
     field(SCAN, "I/O Intr")
@@ -387,7 +387,7 @@ record(mbbi, "$(P)ALARM2_ST_ER_IN") {
 
 }
 
-record(mbbo, "$(P)ALARM2_ST_ER_OUT") {
+record(mbbo, "$(P)Alarm2StEr-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 13 0x000F)")
     field(DESC, "Alarm 2 state error")
@@ -400,7 +400,7 @@ record(mbbo, "$(P)ALARM2_ST_ER_OUT") {
 
 
 ## Parameter 35: Alarm 2 state LED. 
-record(mbbi, "$(P)ALARM2_LED_IN") {
+record(mbbi, "$(P)Alarm2Led-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 14 0x000F)")
     field(SCAN, "I/O Intr")
@@ -413,7 +413,7 @@ record(mbbi, "$(P)ALARM2_LED_IN") {
 
 }
 
-record(mbbo, "$(P)ALARM2_LED_OUT") {
+record(mbbo, "$(P)Alarm2Led-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 14 0x000F)")
     field(DESC, "Alarm 2 state LED")
@@ -426,7 +426,7 @@ record(mbbo, "$(P)ALARM2_LED_OUT") {
 
 
 ## Parameter 38: Alarm 2 setpoint prot. User cannot modify setpoint
-record(mbbi, "$(P)ALARM2_SP_PROT_IN") {
+record(mbbi, "$(P)Alarm2SpProt-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 17 0x000F)")
     field(SCAN, "I/O Intr")
@@ -441,7 +441,7 @@ record(mbbi, "$(P)ALARM2_SP_PROT_IN") {
 
 }
 
-record(mbbo, "$(P)ALARM2_SP_PROT_OUT") {
+record(mbbo, "$(P)Alarm2SpProt-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 17 0x000F)")
     field(DESC, "Alarm 2 setpoint prot")
@@ -456,7 +456,7 @@ record(mbbo, "$(P)ALARM2_SP_PROT_OUT") {
 
 
 ## Parameter 39: Cooling fluid. Heating/cooling PID fluid
-record(mbbi, "$(P)COOLING_FLUID_IN") {
+record(mbbi, "$(P)CoolingFluid-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 18 0x000F)")
     field(SCAN, "I/O Intr")
@@ -471,7 +471,7 @@ record(mbbi, "$(P)COOLING_FLUID_IN") {
 
 }
 
-record(mbbo, "$(P)COOLING_FLUID_OUT") {
+record(mbbo, "$(P)CoolingFluid-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 18 0x000F)")
     field(DESC, "Cooling fluid")

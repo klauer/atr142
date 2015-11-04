@@ -3,16 +3,16 @@ record(mbbiDirect, "$(P)$(R)") {
     field(INP, "@asynMask($(PORT) $(OFFSET) 0x0007)")
     field(SCAN, "$(SCAN)")
     #field(TPRO, 1)
-    field(FLNK, "$(P)$(R)_FANOUT")
+    field(FLNK, "$(P)$(R)Fanout_")
 }
 
-record(fanout, "$(P)$(R)_FANOUT") {
-    field(LNK1, "$(P)Q1_RELAY_IN")
-    field(LNK2, "$(P)Q2_RELAY_IN")
-    field(LNK3, "$(P)SSR_IN")
+record(fanout, "$(P)$(R)Fanout_") {
+    field(LNK1, "$(P)Q1Relay-I")
+    field(LNK2, "$(P)Q2Relay-I")
+    field(LNK3, "$(P)Ssr-I")
 }
 
-record(bi, "$(P)Q1_RELAY_IN") {
+record(bi, "$(P)Q1Relay-I") {
     field(INP, "$(P)$(R).B0")
     #field(TPRO, 1)
 
@@ -24,7 +24,7 @@ record(bi, "$(P)Q1_RELAY_IN") {
 
 }
 
-record(bi, "$(P)Q2_RELAY_IN") {
+record(bi, "$(P)Q2Relay-I") {
     field(INP, "$(P)$(R).B1")
     #field(TPRO, 1)
 
@@ -36,7 +36,7 @@ record(bi, "$(P)Q2_RELAY_IN") {
 
 }
 
-record(bi, "$(P)SSR_IN") {
+record(bi, "$(P)Ssr-I") {
     field(INP, "$(P)$(R).B2")
     #field(TPRO, 1)
 

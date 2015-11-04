@@ -1,6 +1,6 @@
 
 ## Parameter 1: Command Output. 
-record(mbbi, "$(P)COMMAND_IN") {
+record(mbbi, "$(P)Command-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 0 0x000F)")
     field(SCAN, "I/O Intr")
@@ -17,7 +17,7 @@ record(mbbi, "$(P)COMMAND_IN") {
 
 }
 
-record(mbbo, "$(P)COMMAND_OUT") {
+record(mbbo, "$(P)Command-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 0 0x000F)")
     field(DESC, "Command Output")
@@ -34,7 +34,7 @@ record(mbbo, "$(P)COMMAND_OUT") {
 
 
 ## Parameter 2: Sensor. Use $(P)PARAM2 for sensors > 15
-record(mbbi, "$(P)SENSOR_IN") {
+record(mbbi, "$(P)Sensor-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 1 0x000F)")
     field(SCAN, "I/O Intr")
@@ -75,7 +75,7 @@ record(mbbi, "$(P)SENSOR_IN") {
 
 }
 
-record(mbbo, "$(P)SENSOR_OUT") {
+record(mbbo, "$(P)Sensor-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 1 0x000F)")
     field(DESC, "Sensor")
@@ -116,7 +116,7 @@ record(mbbo, "$(P)SENSOR_OUT") {
 
 
 ## Parameter 8: Latch on function. 
-record(mbbi, "$(P)LATCH_IN") {
+record(mbbi, "$(P)Latch-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 7 0x000F)")
     field(SCAN, "I/O Intr")
@@ -133,7 +133,7 @@ record(mbbi, "$(P)LATCH_IN") {
 
 }
 
-record(mbbo, "$(P)LATCH_OUT") {
+record(mbbo, "$(P)Latch-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 7 0x000F)")
     field(DESC, "Latch on function")
@@ -150,7 +150,7 @@ record(mbbo, "$(P)LATCH_OUT") {
 
 
 ## Parameter 11: Action type. Last option: "If process is above setpoint, output is disabled (Heating)"
-record(mbbi, "$(P)ACTION_IN") {
+record(mbbi, "$(P)Action-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 10 0x000F)")
     field(SCAN, "I/O Intr")
@@ -165,7 +165,7 @@ record(mbbi, "$(P)ACTION_IN") {
 
 }
 
-record(mbbo, "$(P)ACTION_OUT") {
+record(mbbo, "$(P)Action-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 10 0x000F)")
     field(DESC, "Action type")
@@ -180,7 +180,7 @@ record(mbbo, "$(P)ACTION_OUT") {
 
 
 ## Parameter 12: Command reset. 
-record(mbbi, "$(P)CMD_RESET_IN") {
+record(mbbi, "$(P)CmdReset-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 11 0x000F)")
     field(SCAN, "I/O Intr")
@@ -195,7 +195,7 @@ record(mbbi, "$(P)CMD_RESET_IN") {
 
 }
 
-record(mbbo, "$(P)CMD_RESET_OUT") {
+record(mbbo, "$(P)CmdReset-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 11 0x000F)")
     field(DESC, "Command reset")
@@ -210,7 +210,7 @@ record(mbbo, "$(P)CMD_RESET_OUT") {
 
 
 ## Parameter 13: Command errored. 
-record(mbbi, "$(P)CMD_ERROR_IN") {
+record(mbbi, "$(P)CmdError-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 12 0x000F)")
     field(SCAN, "I/O Intr")
@@ -223,7 +223,7 @@ record(mbbi, "$(P)CMD_ERROR_IN") {
 
 }
 
-record(mbbo, "$(P)CMD_ERROR_OUT") {
+record(mbbo, "$(P)CmdError-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 12 0x000F)")
     field(DESC, "Command errored")
@@ -236,7 +236,7 @@ record(mbbo, "$(P)CMD_ERROR_OUT") {
 
 
 ## Parameter 17: Command Setpoint Protection. 
-record(mbbi, "$(P)SET_PROTECT_IN") {
+record(mbbi, "$(P)SetProtect-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 16 0x000F)")
     field(SCAN, "I/O Intr")
@@ -249,7 +249,7 @@ record(mbbi, "$(P)SET_PROTECT_IN") {
 
 }
 
-record(mbbo, "$(P)SET_PROTECT_OUT") {
+record(mbbo, "$(P)SetProtect-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 16 0x000F)")
     field(DESC, "Command Setpoint Protection")

@@ -95,8 +95,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)ACTION_OUT"
-indicatorPv "$(P)ACTION_IN"
+controlPv "$(P)Action-SP"
+indicatorPv "$(P)Action-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -135,8 +135,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)ALARM1_OP_OUT"
-indicatorPv "$(P)ALARM1_OP_IN"
+controlPv "$(P)Alarm1Op-SP"
+indicatorPv "$(P)Alarm1Op-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -175,8 +175,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)ALARM1_RESET_OUT"
-indicatorPv "$(P)ALARM1_RESET_IN"
+controlPv "$(P)Alarm1Reset-SP"
+indicatorPv "$(P)Alarm1Reset-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -215,8 +215,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)ALARM1_SP_PROT_OUT"
-indicatorPv "$(P)ALARM1_SP_PROT_IN"
+controlPv "$(P)Alarm1SpProt-SP"
+indicatorPv "$(P)Alarm1SpProt-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -255,8 +255,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)ALARM1_ST_ER_OUT"
-indicatorPv "$(P)ALARM1_ST_ER_IN"
+controlPv "$(P)Alarm1StEr-SP"
+indicatorPv "$(P)Alarm1StEr-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -295,8 +295,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)ALARM1_LED_OUT"
-indicatorPv "$(P)ALARM1_LED_IN"
+controlPv "$(P)Alarm1Led-SP"
+indicatorPv "$(P)Alarm1Led-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -335,8 +335,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)ALARM1_ST_OUT"
-indicatorPv "$(P)ALARM1_ST_IN"
+controlPv "$(P)Alarm1St-SP"
+indicatorPv "$(P)Alarm1St-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -375,8 +375,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)ALARM2_OP_OUT"
-indicatorPv "$(P)ALARM2_OP_IN"
+controlPv "$(P)Alarm2Op-SP"
+indicatorPv "$(P)Alarm2Op-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -415,8 +415,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)ALARM2_RESET_OUT"
-indicatorPv "$(P)ALARM2_RESET_IN"
+controlPv "$(P)Alarm2Reset-SP"
+indicatorPv "$(P)Alarm2Reset-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -455,8 +455,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)ALARM2_SP_PROT_OUT"
-indicatorPv "$(P)ALARM2_SP_PROT_IN"
+controlPv "$(P)Alarm2SpProt-SP"
+indicatorPv "$(P)Alarm2SpProt-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -495,8 +495,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)ALARM2_ST_ER_OUT"
-indicatorPv "$(P)ALARM2_ST_ER_IN"
+controlPv "$(P)Alarm2StEr-SP"
+indicatorPv "$(P)Alarm2StEr-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -535,8 +535,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)ALARM2_LED_OUT"
-indicatorPv "$(P)ALARM2_LED_IN"
+controlPv "$(P)Alarm2Led-SP"
+indicatorPv "$(P)Alarm2Led-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -575,8 +575,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)ALARM2_ST_OUT"
-indicatorPv "$(P)ALARM2_ST_IN"
+controlPv "$(P)Alarm2St-SP"
+indicatorPv "$(P)Alarm2St-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -615,8 +615,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)AUTO_MODE_OUT"
-indicatorPv "$(P)AUTO_MODE_IN"
+controlPv "$(P)AutoMode-SP"
+indicatorPv "$(P)AutoMode-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -655,8 +655,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)BAUD_OUT"
-indicatorPv "$(P)BAUD_IN"
+controlPv "$(P)Baud-SP"
+indicatorPv "$(P)Baud-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -695,8 +695,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)CMD_ERROR_OUT"
-indicatorPv "$(P)CMD_ERROR_IN"
+controlPv "$(P)CmdError-SP"
+indicatorPv "$(P)CmdError-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -735,8 +735,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)COMMAND_OUT"
-indicatorPv "$(P)COMMAND_IN"
+controlPv "$(P)Command-SP"
+indicatorPv "$(P)Command-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -775,8 +775,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)CMD_RESET_OUT"
-indicatorPv "$(P)CMD_RESET_IN"
+controlPv "$(P)CmdReset-SP"
+indicatorPv "$(P)CmdReset-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -815,8 +815,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)SET_PROTECT_OUT"
-indicatorPv "$(P)SET_PROTECT_IN"
+controlPv "$(P)SetProtect-SP"
+indicatorPv "$(P)SetProtect-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -855,8 +855,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)CONV_HZ_OUT"
-indicatorPv "$(P)CONV_HZ_IN"
+controlPv "$(P)ConvHz-SP"
+indicatorPv "$(P)ConvHz-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -895,8 +895,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)COOLING_FLUID_OUT"
-indicatorPv "$(P)COOLING_FLUID_IN"
+controlPv "$(P)CoolingFluid-SP"
+indicatorPv "$(P)CoolingFluid-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -935,8 +935,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)DEGREES_OUT"
-indicatorPv "$(P)DEGREES_IN"
+controlPv "$(P)Degrees-SP"
+indicatorPv "$(P)Degrees-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -975,8 +975,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)DIG_INPUT_OUT"
-indicatorPv "$(P)DIG_INPUT_IN"
+controlPv "$(P)DigInput-SP"
+indicatorPv "$(P)DigInput-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -1015,8 +1015,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)LATCH_OUT"
-indicatorPv "$(P)LATCH_IN"
+controlPv "$(P)Latch-SP"
+indicatorPv "$(P)Latch-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -1055,8 +1055,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)MASTER_OUT"
-indicatorPv "$(P)MASTER_IN"
+controlPv "$(P)Master-SP"
+indicatorPv "$(P)Master-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -1095,8 +1095,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)OP_MODE_OUT"
-indicatorPv "$(P)OP_MODE_IN"
+controlPv "$(P)OpMode-SP"
+indicatorPv "$(P)OpMode-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -1135,8 +1135,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)SENSOR_OUT"
-indicatorPv "$(P)SENSOR_IN"
+controlPv "$(P)Sensor-SP"
+indicatorPv "$(P)Sensor-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -1175,8 +1175,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)TIMER_FCN_OUT"
-indicatorPv "$(P)TIMER_FCN_IN"
+controlPv "$(P)TimerFcn-SP"
+indicatorPv "$(P)TimerFcn-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -1215,8 +1215,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)TUNE_OUT"
-indicatorPv "$(P)TUNE_IN"
+controlPv "$(P)Tune-SP"
+indicatorPv "$(P)Tune-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -1255,8 +1255,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)USER_MENU_OUT"
-indicatorPv "$(P)USER_MENU_IN"
+controlPv "$(P)UserMenu-SP"
+indicatorPv "$(P)UserMenu-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -1295,8 +1295,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)VIS_FILTER_OUT"
-indicatorPv "$(P)VIS_FILTER_IN"
+controlPv "$(P)VisFilter-SP"
+indicatorPv "$(P)VisFilter-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 
@@ -1335,8 +1335,8 @@ bgColor index 34
 inconsistentColor index 35
 topShadowColor index 37
 botShadowColor index 44
-controlPv "$(P)VIS_TYPE_OUT"
-indicatorPv "$(P)VIS_TYPE_IN"
+controlPv "$(P)VisType-SP"
+indicatorPv "$(P)VisType-I"
 font "helvetica-medium-r-18.0"
 endObjectProperties
 

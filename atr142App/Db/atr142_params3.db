@@ -1,6 +1,6 @@
 
 ## Parameter 44: Conversion frequency. ADC conversion freq
-record(mbbi, "$(P)CONV_HZ_IN") {
+record(mbbi, "$(P)ConvHz-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 3 0x000F)")
     field(SCAN, "I/O Intr")
@@ -35,7 +35,7 @@ record(mbbi, "$(P)CONV_HZ_IN") {
 
 }
 
-record(mbbo, "$(P)CONV_HZ_OUT") {
+record(mbbo, "$(P)ConvHz-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 3 0x000F)")
     field(DESC, "Conversion frequency")
@@ -70,7 +70,7 @@ record(mbbo, "$(P)CONV_HZ_OUT") {
 
 
 ## Parameter 45: Visualization filter. Display refresh modification
-record(mbbi, "$(P)VIS_FILTER_IN") {
+record(mbbi, "$(P)VisFilter-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 4 0x000F)")
     field(SCAN, "I/O Intr")
@@ -105,7 +105,7 @@ record(mbbi, "$(P)VIS_FILTER_IN") {
 
 }
 
-record(mbbo, "$(P)VIS_FILTER_OUT") {
+record(mbbo, "$(P)VisFilter-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 4 0x000F)")
     field(DESC, "Visualization filter")
@@ -140,7 +140,7 @@ record(mbbo, "$(P)VIS_FILTER_OUT") {
 
 
 ## Parameter 46: Tuning type selection. 
-record(mbbi, "$(P)TUNE_IN") {
+record(mbbi, "$(P)Tune-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 5 0x000F)")
     field(SCAN, "I/O Intr")
@@ -155,7 +155,7 @@ record(mbbi, "$(P)TUNE_IN") {
 
 }
 
-record(mbbo, "$(P)TUNE_OUT") {
+record(mbbo, "$(P)Tune-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 5 0x000F)")
     field(DESC, "Tuning type selection")
@@ -170,7 +170,7 @@ record(mbbo, "$(P)TUNE_OUT") {
 
 
 ## Parameter 48: Operating mode. 
-record(mbbi, "$(P)OP_MODE_IN") {
+record(mbbi, "$(P)OpMode-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 7 0x000F)")
     field(SCAN, "I/O Intr")
@@ -191,7 +191,7 @@ record(mbbi, "$(P)OP_MODE_IN") {
 
 }
 
-record(mbbo, "$(P)OP_MODE_OUT") {
+record(mbbo, "$(P)OpMode-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 7 0x000F)")
     field(DESC, "Operating mode")
@@ -212,7 +212,7 @@ record(mbbo, "$(P)OP_MODE_OUT") {
 
 
 ## Parameter 49: Auto/manual. 
-record(mbbi, "$(P)AUTO_MODE_IN") {
+record(mbbi, "$(P)AutoMode-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 8 0x000F)")
     field(SCAN, "I/O Intr")
@@ -227,7 +227,7 @@ record(mbbi, "$(P)AUTO_MODE_IN") {
 
 }
 
-record(mbbo, "$(P)AUTO_MODE_OUT") {
+record(mbbo, "$(P)AutoMode-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 8 0x000F)")
     field(DESC, "Auto/manual")
@@ -242,7 +242,7 @@ record(mbbo, "$(P)AUTO_MODE_OUT") {
 
 
 ## Parameter 50: Digital input. 
-record(mbbi, "$(P)DIG_INPUT_IN") {
+record(mbbi, "$(P)DigInput-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 9 0x000F)")
     field(SCAN, "I/O Intr")
@@ -271,7 +271,7 @@ record(mbbi, "$(P)DIG_INPUT_IN") {
 
 }
 
-record(mbbo, "$(P)DIG_INPUT_OUT") {
+record(mbbo, "$(P)DigInput-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 9 0x000F)")
     field(DESC, "Digital input")
@@ -300,7 +300,7 @@ record(mbbo, "$(P)DIG_INPUT_OUT") {
 
 
 ## Parameter 53: User menu cycle. 
-record(mbbi, "$(P)USER_MENU_IN") {
+record(mbbi, "$(P)UserMenu-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 12 0x000F)")
     field(SCAN, "I/O Intr")
@@ -325,7 +325,7 @@ record(mbbi, "$(P)USER_MENU_IN") {
 
 }
 
-record(mbbo, "$(P)USER_MENU_OUT") {
+record(mbbo, "$(P)UserMenu-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 12 0x000F)")
     field(DESC, "User menu cycle")
@@ -350,7 +350,7 @@ record(mbbo, "$(P)USER_MENU_OUT") {
 
 
 ## Parameter 54: Visualization type. 
-record(mbbi, "$(P)VIS_TYPE_IN") {
+record(mbbi, "$(P)VisType-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 13 0x000F)")
     field(SCAN, "I/O Intr")
@@ -367,7 +367,7 @@ record(mbbi, "$(P)VIS_TYPE_IN") {
 
 }
 
-record(mbbo, "$(P)VIS_TYPE_OUT") {
+record(mbbo, "$(P)VisType-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 13 0x000F)")
     field(DESC, "Visualization type")
@@ -384,7 +384,7 @@ record(mbbo, "$(P)VIS_TYPE_OUT") {
 
 
 ## Parameter 55: Degree. 
-record(mbbi, "$(P)DEGREES_IN") {
+record(mbbi, "$(P)Degrees-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 14 0x000F)")
     field(SCAN, "I/O Intr")
@@ -397,7 +397,7 @@ record(mbbi, "$(P)DEGREES_IN") {
 
 }
 
-record(mbbo, "$(P)DEGREES_OUT") {
+record(mbbo, "$(P)Degrees-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 14 0x000F)")
     field(DESC, "Degree")
@@ -410,7 +410,7 @@ record(mbbo, "$(P)DEGREES_OUT") {
 
 
 ## Parameter 56: Baud rate. 
-record(mbbi, "$(P)BAUD_IN") {
+record(mbbi, "$(P)Baud-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 15 0x000F)")
     field(SCAN, "I/O Intr")
@@ -431,7 +431,7 @@ record(mbbi, "$(P)BAUD_IN") {
 
 }
 
-record(mbbo, "$(P)BAUD_OUT") {
+record(mbbo, "$(P)Baud-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 15 0x000F)")
     field(DESC, "Baud rate")
@@ -452,7 +452,7 @@ record(mbbo, "$(P)BAUD_OUT") {
 
 
 ## Parameter 59: Master mode. 
-record(mbbi, "$(P)MASTER_IN") {
+record(mbbi, "$(P)Master-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 18 0x000F)")
     field(SCAN, "I/O Intr")
@@ -473,7 +473,7 @@ record(mbbi, "$(P)MASTER_IN") {
 
 }
 
-record(mbbo, "$(P)MASTER_OUT") {
+record(mbbo, "$(P)Master-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 18 0x000F)")
     field(DESC, "Master mode")

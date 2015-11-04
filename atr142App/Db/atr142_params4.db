@@ -1,6 +1,6 @@
 
 ## Parameter 63: Timer function. 
-record(mbbi, "$(P)TIMER_FCN_IN") {
+record(mbbi, "$(P)TimerFcn-I") {
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(PORT)_R$(BASE) 2 0x000F)")
     field(SCAN, "I/O Intr")
@@ -27,7 +27,7 @@ record(mbbi, "$(P)TIMER_FCN_IN") {
 
 }
 
-record(mbbo, "$(P)TIMER_FCN_OUT") {
+record(mbbo, "$(P)TimerFcn-SP") {
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 2 0x000F)")
     field(DESC, "Timer function")
