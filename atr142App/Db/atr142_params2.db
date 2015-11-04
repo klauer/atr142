@@ -42,6 +42,7 @@ record(mbbi, "$(P)Alarm1Op-I") {
 }
 
 record(mbbo, "$(P)Alarm1Op-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 2 0x000F)")
     field(DESC, "Alarm 1 operating mode")
@@ -100,6 +101,7 @@ record(mbbi, "$(P)Alarm1St-I") {
 }
 
 record(mbbo, "$(P)Alarm1St-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 3 0x000F)")
     field(DESC, "Alarm 1 state output")
@@ -132,6 +134,7 @@ record(mbbi, "$(P)Alarm1Reset-I") {
 }
 
 record(mbbo, "$(P)Alarm1Reset-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 4 0x000F)")
     field(DESC, "Alarm 1 reset")
@@ -160,6 +163,7 @@ record(mbbi, "$(P)Alarm1StEr-I") {
 }
 
 record(mbbo, "$(P)Alarm1StEr-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 5 0x000F)")
     field(DESC, "Alarm 1 state error")
@@ -186,6 +190,7 @@ record(mbbi, "$(P)Alarm1Led-I") {
 }
 
 record(mbbo, "$(P)Alarm1Led-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 6 0x000F)")
     field(DESC, "Alarm 1 state LED")
@@ -214,6 +219,7 @@ record(mbbi, "$(P)Alarm1SpProt-I") {
 }
 
 record(mbbo, "$(P)Alarm1SpProt-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 9 0x000F)")
     field(DESC, "Alarm 1 setpoint prot")
@@ -270,6 +276,7 @@ record(mbbi, "$(P)Alarm2Op-I") {
 }
 
 record(mbbo, "$(P)Alarm2Op-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 10 0x000F)")
     field(DESC, "Alarm 2 operating mode")
@@ -328,6 +335,7 @@ record(mbbi, "$(P)Alarm2St-I") {
 }
 
 record(mbbo, "$(P)Alarm2St-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 11 0x000F)")
     field(DESC, "Alarm 2 state output")
@@ -360,6 +368,7 @@ record(mbbi, "$(P)Alarm2Reset-I") {
 }
 
 record(mbbo, "$(P)Alarm2Reset-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 12 0x000F)")
     field(DESC, "Alarm 2 reset")
@@ -388,6 +397,7 @@ record(mbbi, "$(P)Alarm2StEr-I") {
 }
 
 record(mbbo, "$(P)Alarm2StEr-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 13 0x000F)")
     field(DESC, "Alarm 2 state error")
@@ -414,6 +424,7 @@ record(mbbi, "$(P)Alarm2Led-I") {
 }
 
 record(mbbo, "$(P)Alarm2Led-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 14 0x000F)")
     field(DESC, "Alarm 2 state LED")
@@ -442,6 +453,7 @@ record(mbbi, "$(P)Alarm2SpProt-I") {
 }
 
 record(mbbo, "$(P)Alarm2SpProt-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 17 0x000F)")
     field(DESC, "Alarm 2 setpoint prot")
@@ -472,6 +484,7 @@ record(mbbi, "$(P)CoolingFluid-I") {
 }
 
 record(mbbo, "$(P)CoolingFluid-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 18 0x000F)")
     field(DESC, "Cooling fluid")

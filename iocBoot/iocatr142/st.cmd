@@ -1,11 +1,15 @@
 #!../../bin/linux-x86_64/atr142
 
 < envPaths
-epicsEnvSet("ENGINEER", "$(ENGINEER=unset x1234)")
-epicsEnvSet("LOCATION", "$(LOCATION=unset)")
-epicsEnvSet("ADMIN_P", "XF:03IDA-CT{IOC:ATR142}")
+epicsEnvSet("ENGINEER", "klauer x3615)")
+epicsEnvSet("LOCATION", "3IDA mono")
+epicsEnvSet("IOC_PREFIX", "XF:03IDA-CT{IOC:$(IOCNAME)}")
+
+epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")
+epicsEnvSet("EPICS_CA_ADDR_LIST", "10.3.0.255")
+
 ## for tcp/ip:
-epicsEnvSet("MOXA_HOST", "$(MOXA_HOST=10.3.2.52)")
+epicsEnvSet("MOXA_HOST", "10.3.2.52")
 
 ## for serial:
 # epicsEnvSet("ATR142_SERIALPORT", "$(ATR142_SERIALPORT=/dev/ttyS1)")
@@ -15,9 +19,8 @@ epicsEnvSet("MOXA_HOST", "$(MOXA_HOST=10.3.2.52)")
 dbLoadDatabase("../../dbd/atr142.dbd",0,0)
 atr142_registerRecordDeviceDriver(pdbbase) 
 
-# iocAdminSoft note: no trailing colon (:)
-dbLoadRecords("$(EPICS_BASE)/db/iocAdminSoft.db", "IOC=$(ADMIN_P)")
-# dbLoadRecords("$(EPICS_BASE)/db/save_restoreStatus.db", "P=$(PREFIX):")
+dbLoadRecords("$(EPICS_BASE)/db/iocAdminSoft.db", "IOC=$(IOC_PREFIX)")
+dbLoadRecords("$(EPICS_BASE)/db/save_restoreStatus.db", "P=$(IOC_PREFIX)")
 
 ## drvAsynIPPortConfigure('port name' 'host:port [protocol]' priority 'disable auto-connect' noProcessEos)
 drvAsynIPPortConfigure("P1", "$(MOXA_HOST):4021", 0, 0, 1)
@@ -43,24 +46,23 @@ drvAsynIPPortConfigure("P2", "$(MOXA_HOST):4022", 0, 0, 1)
 # slaveAddress = 1 (device default is 254)
 
 epicsEnvSet("TIMEOUT", 2.0)
+epicsEnvSet("PREFIX", "XF:03IDA-CT{HDCMHeater:1}")
+epicsEnvSet("SLAVE_ADDR",  "1")
+epicsEnvSet("MODBUS_PORT", "CTRON1")
+epicsEnvSet("ASYN_PORT", "P1")
+< load_ctron.cmd
 
-# epicsEnvSet("PREFIX", "XF:03IDA-CT{HDCMHeater:1}")
-# epicsEnvSet("SLAVE_ADDR",  "1")
-# epicsEnvSet("MODBUS_PORT", "CTRON1")
-# epicsEnvSet("ASYN_PORT", "P1")
-# < load_ctron.cmd
-# 
-# epicsEnvSet("PREFIX", "XF:03IDA-CT{HDCMHeater:2}")
-# epicsEnvSet("SLAVE_ADDR",  "2")
-# epicsEnvSet("MODBUS_PORT", "CTRON2")
-# epicsEnvSet("ASYN_PORT", "P2")
-# < load_ctron.cmd
+epicsEnvSet("PREFIX", "XF:03IDA-CT{HDCMHeater:2}")
+epicsEnvSet("SLAVE_ADDR",  "2")
+epicsEnvSet("MODBUS_PORT", "CTRON2")
+epicsEnvSet("ASYN_PORT", "P2")
+< load_ctron.cmd
 
-epicsEnvSet("PREFIX", "XF:03IDA-CT{HDCMHeater:3}")
-epicsEnvSet("SLAVE_ADDR", "3")
-epicsEnvSet("MODBUS_PORT", "ATR3")
-epicsEnvSet("ASYN_PORT", "P3")
-< load_atr142.cmd
+# epicsEnvSet("PREFIX", "XF:03IDA-CT{HDCMHeater:3}")
+# epicsEnvSet("SLAVE_ADDR", "3")
+# epicsEnvSet("MODBUS_PORT", "ATR3")
+# epicsEnvSet("ASYN_PORT", "P3")
+# < load_atr142.cmd
  
 # epicsEnvSet("PREFIX", "XF:03IDA-CT{HDCMHeater:4}")
 # epicsEnvSet("SLAVE_ADDR",  "4")
@@ -74,11 +76,31 @@ epicsEnvSet("ASYN_PORT", "P3")
 # epicsEnvSet("ASYN_PORT", "P4")
 # < load_atr142.cmd
 
-## autosave probably not needed:
-#save_restoreSet_status_prefix("$(PREFIX)")
+## autosave/restore machinery
+save_restoreSet_status_prefix("$(IOC_PREFIX)")
+save_restoreSet_Debug(0)
+save_restoreSet_IncompleteSetsOk(1)
+save_restoreSet_DatedBackupFiles(1)
+
+set_savefile_path("${TOP}/as","/save")
+set_requestfile_path("${TOP}/as","/req")
+
+system("install -m 777 -d ${TOP}/as/save")
+system("install -m 777 -d ${TOP}/as/req")
+
+set_pass0_restoreFile("info_settings.sav")
+set_pass1_restoreFile("info_settings.sav")
 
 iocInit()
 
+## more autosave/restore machinery
+cd ${TOP}/as/req
+makeAutosaveFiles()
+# create_monitor_set("info_positions.req", 5 , "")
+create_monitor_set("info_settings.req", 15 , "")
+
 # if necessary, copy over the records for channel finder:
-#dbl > records.dbl
-#system "cp records.dbl /cf-update/$HOSTNAME.$IOCNAME.dbl"
+cd ${TOP}
+dbl > ./records.dbl
+system "cp ./records.dbl /cf-update/$HOSTNAME.$IOCNAME.dbl"
+

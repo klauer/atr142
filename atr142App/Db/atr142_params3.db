@@ -36,6 +36,7 @@ record(mbbi, "$(P)ConvHz-I") {
 }
 
 record(mbbo, "$(P)ConvHz-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 3 0x000F)")
     field(DESC, "Conversion frequency")
@@ -106,6 +107,7 @@ record(mbbi, "$(P)VisFilter-I") {
 }
 
 record(mbbo, "$(P)VisFilter-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 4 0x000F)")
     field(DESC, "Visualization filter")
@@ -156,6 +158,7 @@ record(mbbi, "$(P)Tune-I") {
 }
 
 record(mbbo, "$(P)Tune-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 5 0x000F)")
     field(DESC, "Tuning type selection")
@@ -192,6 +195,7 @@ record(mbbi, "$(P)OpMode-I") {
 }
 
 record(mbbo, "$(P)OpMode-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 7 0x000F)")
     field(DESC, "Operating mode")
@@ -228,6 +232,7 @@ record(mbbi, "$(P)AutoMode-I") {
 }
 
 record(mbbo, "$(P)AutoMode-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 8 0x000F)")
     field(DESC, "Auto/manual")
@@ -272,6 +277,7 @@ record(mbbi, "$(P)DigInput-I") {
 }
 
 record(mbbo, "$(P)DigInput-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 9 0x000F)")
     field(DESC, "Digital input")
@@ -326,6 +332,7 @@ record(mbbi, "$(P)UserMenu-I") {
 }
 
 record(mbbo, "$(P)UserMenu-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 12 0x000F)")
     field(DESC, "User menu cycle")
@@ -368,6 +375,7 @@ record(mbbi, "$(P)VisType-I") {
 }
 
 record(mbbo, "$(P)VisType-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 13 0x000F)")
     field(DESC, "Visualization type")
@@ -398,6 +406,7 @@ record(mbbi, "$(P)Degrees-I") {
 }
 
 record(mbbo, "$(P)Degrees-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 14 0x000F)")
     field(DESC, "Degree")
@@ -432,6 +441,7 @@ record(mbbi, "$(P)Baud-I") {
 }
 
 record(mbbo, "$(P)Baud-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 15 0x000F)")
     field(DESC, "Baud rate")
@@ -474,6 +484,7 @@ record(mbbi, "$(P)Master-I") {
 }
 
 record(mbbo, "$(P)Master-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 18 0x000F)")
     field(DESC, "Master mode")

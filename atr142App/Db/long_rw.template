@@ -11,5 +11,5 @@ record(longin, "$(P)$(R)-I") {
 record(longout,"$(P)$(R)-SP") {
     field(DTYP,"asynUInt32Digital")
     field(OUT,"@asynMask($(PORT)_W$(BASE) $(OFFSET) 0xFFFF $(TIMEOUT))")
-    field(TPRO, 1)
+    info(autosaveFields_pass0, "VAL")
 }

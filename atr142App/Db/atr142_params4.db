@@ -28,6 +28,7 @@ record(mbbi, "$(P)TimerFcn-I") {
 }
 
 record(mbbo, "$(P)TimerFcn-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 2 0x000F)")
     field(DESC, "Timer function")

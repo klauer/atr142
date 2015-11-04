@@ -2,4 +2,5 @@
 record(longout,"$(P)$(R)-SP") {
     field(DTYP,"asynUInt32Digital")
     field(OUT,"@asynMask($(PORT) $(OFFSET) 0xFFFF)")
+    info(autosaveFields_pass0, "VAL")
 }

@@ -18,6 +18,7 @@ record(mbbi, "$(P)Command-I") {
 }
 
 record(mbbo, "$(P)Command-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 0 0x000F)")
     field(DESC, "Command Output")
@@ -76,6 +77,7 @@ record(mbbi, "$(P)Sensor-I") {
 }
 
 record(mbbo, "$(P)Sensor-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 1 0x000F)")
     field(DESC, "Sensor")
@@ -134,6 +136,7 @@ record(mbbi, "$(P)Latch-I") {
 }
 
 record(mbbo, "$(P)Latch-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 7 0x000F)")
     field(DESC, "Latch on function")
@@ -166,6 +169,7 @@ record(mbbi, "$(P)Action-I") {
 }
 
 record(mbbo, "$(P)Action-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 10 0x000F)")
     field(DESC, "Action type")
@@ -196,6 +200,7 @@ record(mbbi, "$(P)CmdReset-I") {
 }
 
 record(mbbo, "$(P)CmdReset-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 11 0x000F)")
     field(DESC, "Command reset")
@@ -224,6 +229,7 @@ record(mbbi, "$(P)CmdError-I") {
 }
 
 record(mbbo, "$(P)CmdError-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 12 0x000F)")
     field(DESC, "Command errored")
@@ -250,6 +256,7 @@ record(mbbi, "$(P)SetProtect-I") {
 }
 
 record(mbbo, "$(P)SetProtect-SP") {
+    info(autosaveFields_pass0, "VAL")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(PORT)_W$(BASE) 16 0x000F)")
     field(DESC, "Command Setpoint Protection")

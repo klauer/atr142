@@ -24,11 +24,17 @@ atr142_DBD += drvAsynIPPort.dbd
 atr142_DBD += drvAsynSerialPort.dbd
 atr142_DBD += modbusSupport.dbd
 atr142_DBD += mbbiDirectRecord.dbd
+atr142_DBD += asSupport.dbd
 
 # Add all the support libraries needed by this IOC
 atr142_LIBS += devIocStats
 atr142_LIBS += modbus
 atr142_LIBS += asyn
+
+atr142_LIBS += devIocStats
+atr142_LIBS += caPutLog
+atr142_LIBS += autosave
+atr142_LIBS += calc
 
 # atr142_registerRecordDeviceDriver.cpp derives from atr142.dbd
 atr142_SRCS += atr142_registerRecordDeviceDriver.cpp

@@ -11,5 +11,5 @@ record(ai, "$(P)$(R)-I") {
 record(ao,"$(P)$(R)-SP") {
     field(DTYP,"asynFloat64")
     field(OUT,"@asyn($(PORT)_W$(BASE) $(OFFSET) $(TIMEOUT))FLOAT32_LE")
-    field(TPRO, 1)
+    info(autosaveFields_pass0, "VAL")
 }
