@@ -17,7 +17,7 @@ atr142_DBD += base.dbd
 
 # Include dbd files from all support applications:
 atr142_DBD += system.dbd
-#atr142_DBD += devIocStats.dbd
+atr142_DBD += devIocStats.dbd
 
 atr142_DBD += asyn.dbd
 atr142_DBD += drvAsynIPPort.dbd
@@ -26,8 +26,7 @@ atr142_DBD += modbusSupport.dbd
 atr142_DBD += mbbiDirectRecord.dbd
 
 # Add all the support libraries needed by this IOC
-#atr142_LIBS += devIocStats
-
+atr142_LIBS += devIocStats
 atr142_LIBS += modbus
 atr142_LIBS += asyn
 

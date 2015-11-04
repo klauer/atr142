@@ -1,15 +1,15 @@
 ## Read-write: $(R)
 
-record(longin, "$(P)$(R)_IN") {
+record(longin, "$(P)$(R)-I") {
     field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask($(PORT)_R$(BASE) $(OFFSET) 0xFFFF)")
+    field(INP,"@asynMask($(PORT)_R$(BASE) $(OFFSET) 0xFFFF $(TIMEOUT))")
     field(SCAN, "I/O Intr")
     field(EGU, "$(EGU)")
     field(FLNK, "$(FLNK)")
 }
 
-record(longout,"$(P)$(R)_OUT") {
+record(longout,"$(P)$(R)-SP") {
     field(DTYP,"asynUInt32Digital")
-    field(OUT,"@asynMask($(PORT)_W$(BASE) $(OFFSET) 0xFFFF)")
+    field(OUT,"@asynMask($(PORT)_W$(BASE) $(OFFSET) 0xFFFF $(TIMEOUT))")
     field(TPRO, 1)
 }

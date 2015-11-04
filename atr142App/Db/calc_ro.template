@@ -1,4 +1,4 @@
-record(calc, "$(P)$(R)_IN") {
+record(calc, "$(P)$(R)-I") {
     field(INPA, "$(P)RAW_$(R)_IN MS")
     field(INPB, "$(INPB)")
     field(INPC, "$(INPC)")

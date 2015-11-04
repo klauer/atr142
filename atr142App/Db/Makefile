@@ -19,6 +19,9 @@ DB += atr142_params2.db
 DB += atr142_params3.db
 DB += atr142_params4.db
 
+# Jumo cTRON
+DB += jumo_ctron.db
+
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
 # <anyname>_template = <templatename>

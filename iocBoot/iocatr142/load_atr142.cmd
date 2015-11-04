@@ -48,8 +48,8 @@ drvModbusAsynConfigure("$(MODBUS_PORT)_W2041", "$(ASYN_PORT)", $(SLAVE_ADDR), 6,
 drvModbusAsynConfigure("$(MODBUS_PORT)_W2061", "$(ASYN_PORT)", $(SLAVE_ADDR), 6, 2061,  4, 0, 500, "ATR142")
 
 ## Load ATR142 records
-dbLoadRecords("$(TOP)/db/atr142.db", "P=$(PREFIX):,PORT=$(MODBUS_PORT)")
-dbLoadRecords("$(TOP)/db/atr142_params1.db", "P=$(PREFIX):,PORT=$(MODBUS_PORT),BASE=2001")
-dbLoadRecords("$(TOP)/db/atr142_params2.db", "P=$(PREFIX):,PORT=$(MODBUS_PORT),BASE=2021")
-dbLoadRecords("$(TOP)/db/atr142_params3.db", "P=$(PREFIX):,PORT=$(MODBUS_PORT),BASE=2041")
-dbLoadRecords("$(TOP)/db/atr142_params4.db", "P=$(PREFIX):,PORT=$(MODBUS_PORT),BASE=2061")
+dbLoadRecords("$(TOP)/db/atr142.db", "P=$(PREFIX),PORT=$(MODBUS_PORT),TIMEOUT=$(TIMEOUT)")
+dbLoadRecords("$(TOP)/db/atr142_params1.db", "P=$(PREFIX),PORT=$(MODBUS_PORT),BASE=2001,TIMEOUT=$(TIMEOUT)")
+dbLoadRecords("$(TOP)/db/atr142_params2.db", "P=$(PREFIX),PORT=$(MODBUS_PORT),BASE=2021,TIMEOUT=$(TIMEOUT)")
+dbLoadRecords("$(TOP)/db/atr142_params3.db", "P=$(PREFIX),PORT=$(MODBUS_PORT),BASE=2041,TIMEOUT=$(TIMEOUT)")
+dbLoadRecords("$(TOP)/db/atr142_params4.db", "P=$(PREFIX),PORT=$(MODBUS_PORT),BASE=2061,TIMEOUT=$(TIMEOUT)")

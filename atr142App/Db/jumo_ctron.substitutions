@@ -1,0 +1,14 @@
+file "float_rw.template" {
+    pattern { P,            R,        PORT, BASE, OFFSET,        TIMEOUT, EGU, FLNK }
+      { "$\(P)",   "Setpoint", "$\(PORT)",    30,   0x07,  "$\(TIMEOUT)",  "",   "" }
+}
+
+file "float_ro.template" {
+    pattern { P,            R,        PORT, BASE, OFFSET,        TIMEOUT, EGU, FLNK }
+      { "$\(P)",       "Temp", "$\(PORT)",    30,   0x03,  "$\(TIMEOUT)",  "",   "" }
+}
+
+file "long_rw.template" {
+    pattern { P,            R,       PORT, BASE, OFFSET,         TIMEOUT, EGU,  FLNK }
+      { "$\(P)",   "Function", "$\(PORT)",   40,   0x0D,   "$\(TIMEOUT)",  "",    "" }
+}

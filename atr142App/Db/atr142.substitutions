@@ -5,139 +5,143 @@ file "calc_rw.template" {
       { "$\(P)",        "SP3",  "A / 10.0",  "A * 10.0",   "C",    1,   "",   "",                       "Setpoint 3" }
       { "$\(P)",        "SP4",  "A / 10.0",  "A * 10.0",   "C",    1,   "",   "",                       "Setpoint 4" }
 
-      { "$\(P)",   "LOWER_SP",  "A / 10.0",  "A * 10.0",   "C",    1,   "",   "",                   "Lower setpoint" }
-      { "$\(P)",   "UPPER_SP",  "A / 10.0",  "A * 10.0",   "C",    1,   "",   "",                    "Upper setpoint"}
-      { "$\(P)",     "OFFSET",  "A / 10.0",  "A * 10.0",   "C",    1,   "",   "",               "Offset calibration" }
-      { "$\(P)",       "GAIN",  "A / 10.0",  "A * 10.0",   "%",    1,   "",   "",                 "Gain calibration" }
-      { "$\(P)",       "HYST",  "A / 10.0",  "A * 10.0",   "C",    1,   "",   "",                       "Hysteresis" }
-      { "$\(P)", "CYCLE_TIME",  "A / 10.0",  "A * 10.0", "sec",    1,   "",   "",                       "Cycle time" }
-      { "$\(P)",   "AL1_HIST",  "A / 10.0",  "A * 10.0",    "",    1,   "",   "",               "Alarm 1 hysteresis" }
-      { "$\(P)",   "AL2_HIST",  "A / 10.0",  "A * 10.0",    "",    1,   "",   "",               "Alarm 2 hysteresis" }
-      { "$\(P)",  "PROP_BAND", "A / 100.0", "A * 100.0",    "",    2,   "",   "",     "Proportional band multiplier" }
-      { "$\(P)",    "OVERLAP",  "A / 10.0",  "A * 10.0",    "",    1,   "",   "",            "Overlapping/dead band" }
-      { "$\(P)",   "DEV_TUNE",  "A / 10.0",  "A * 10.0",    "",    1,   "",   "",                "SP deviation tune" }
-      { "$\(P)",   "GRADIENT",  "A / 10.0",  "A * 10.0",    "",    1,   "",   "",  "Rising gradient for start/cycle" }
-      { "$\(P)",  "FALL_GRAD",  "A / 10.0",  "A * 10.0",    "",    1,   "",   "", "Falling gradient for start/cycle" }
+      { "$\(P)",      "Lower",  "A / 10.0",  "A * 10.0",   "C",    1,   "",   "",                   "Lower setpoint" }
+      { "$\(P)",      "Upper",  "A / 10.0",  "A * 10.0",   "C",    1,   "",   "",                    "Upper setpoint"}
+      { "$\(P)",     "Offset",  "A / 10.0",  "A * 10.0",   "C",    1,   "",   "",               "Offset calibration" }
+      { "$\(P)",       "Gain",  "A / 10.0",  "A * 10.0",   "%",    1,   "",   "",                 "Gain calibration" }
+      { "$\(P)",       "Hyst",  "A / 10.0",  "A * 10.0",   "C",    1,   "",   "",                       "Hysteresis" }
+      { "$\(P)", "CycleTime",  "A / 10.0",  "A * 10.0", "sec",    1,   "",   "",                       "Cycle time" }
+      { "$\(P)",   "Al1:Hist",  "A / 10.0",  "A * 10.0",    "",    1,   "",   "",               "Alarm 1 hysteresis" }
+      { "$\(P)",   "Al2:Hist",  "A / 10.0",  "A * 10.0",    "",    1,   "",   "",               "Alarm 2 hysteresis" }
+      { "$\(P)",  "PropBand", "A / 100.0", "A * 100.0",    "",    2,   "",   "",     "Proportional band multiplier" }
+      { "$\(P)",    "Overlap",  "A / 10.0",  "A * 10.0",    "",    1,   "",   "",            "Overlapping/dead band" }
+      { "$\(P)",   "DevTune",  "A / 10.0",  "A * 10.0",    "",    1,   "",   "",                "SP deviation tune" }
+      { "$\(P)",   "Gradient",  "A / 10.0",  "A * 10.0",    "",    1,   "",   "",  "Rising gradient for start/cycle" }
+      { "$\(P)",  "FallGrad",  "A / 10.0",  "A * 10.0",    "",    1,   "",   "", "Falling gradient for start/cycle" }
 
 }
 
 file "calc_ro.template" {
-   pattern { P,         R, RAW_TO_USER, EGU, PREC, INPB, INPC }
-     { "$\(P)", "CJ_TEMP",  "A / 10.0", "C",    1,   "",   "" }
-     { "$\(P)",    "TEMP",  "A / 10.0", "C",    1,   "",   "" }
-     { "$\(P)", "HEATING",  "A / 10.0", "C",    1,   "",   "" }
+   pattern 
+     {       P,         R, RAW_TO_USER, EGU, PREC, INPB, INPC }
+     { "$\(P)",  "CjTemp",  "A / 10.0", "C",    1,   "",   "" }
+     { "$\(P)",    "Temp",  "A / 10.0", "C",    1,   "",   "" }
+     { "$\(P)", "Heating",  "A / 10.0", "C",    1,   "",   "" }
 }
 
 file "long_rw.template" {
-    pattern { P,                 R,       PORT, BASE, OFFSET,   EGU,          FLNK }
-      { "$\(P)",         "RAW_SP1", "$\(PORT)", 1000,      1,    "", "$\(P)SP1_IN" }
-      { "$\(P)",         "RAW_SP2", "$\(PORT)", 1000,      2,    "", "$\(P)SP2_IN" }
-      { "$\(P)",         "RAW_SP3", "$\(PORT)", 1000,      3,    "", "$\(P)SP3_IN" }
-      { "$\(P)",         "RAW_SP4", "$\(PORT)", 1000,      4,    "", "$\(P)SP4_IN" }
+    pattern
+      {       P,                R,       PORT, BASE, OFFSET,   EGU,          FLNK }
+      { "$\(P)",         "SP1Raw", "$\(PORT)", 1000,      1,    "",            "" }
+      { "$\(P)",         "SP2Raw", "$\(PORT)", 1000,      2,    "",            "" }
+      { "$\(P)",         "SP3Raw", "$\(PORT)", 1000,      3,    "",            "" }
+      { "$\(P)",         "SP4Raw", "$\(PORT)", 1000,      4,    "",            "" }
 
-      { "$\(P)",   "SLAVE_ADDRESS", "$\(PORT)",    0,      5,    "",            "" }
+      { "$\(P)",   "SlaveAddress", "$\(PORT)",    0,      5,    "",            "" }
 
-      { "$\(P)",   "DECIMAL_POINT", "$\(PORT)", 2001,      2,    "",            "" }
-      { "$\(P)",    "RAW_LOWER_SP", "$\(PORT)", 2001,      3,    "",            "" }
-      { "$\(P)",    "RAW_UPPER_SP", "$\(PORT)", 2001,      4,    "",            "" }
-      { "$\(P)",    "LOWER_LINEAR", "$\(PORT)", 2001,      5,    "",            "" }
-      { "$\(P)",    "UPPER_LINEAR", "$\(PORT)", 2001,      6,    "",            "" }
+      { "$\(P)",   "DecimalPoint", "$\(PORT)", 2001,      2,    "",            "" }
+      { "$\(P)",    "LowerRaw", "$\(PORT)", 2001,      3,    "",            "" }
+      { "$\(P)",    "UpperRaw", "$\(PORT)", 2001,      4,    "",            "" }
+      { "$\(P)",    "LowerLinear", "$\(PORT)", 2001,      5,    "",            "" }
+      { "$\(P)",    "UpperLinear", "$\(PORT)", 2001,      6,    "",            "" }
 
-      { "$\(P)",      "RAW_OFFSET", "$\(PORT)", 2001,      8,    "",            "" }
-      { "$\(P)",        "RAW_GAIN", "$\(PORT)", 2001,      9,    "",            "" }
+      { "$\(P)",      "OffsetRaw", "$\(PORT)", 2001,      8,    "",            "" }
+      { "$\(P)",        "GainRaw", "$\(PORT)", 2001,      9,    "",            "" }
 
-      { "$\(P)",        "RAW_HYST", "$\(PORT)", 2001,     14,    "",            "" }
-      { "$\(P)",       "CMD_DELAY", "$\(PORT)", 2001,     15, "sec",            "" }
-      { "$\(P)",           "PID_P", "$\(PORT)", 2001,     17,   "C",            "" }
-      { "$\(P)",           "PID_I", "$\(PORT)", 2001,     18, "sec",            "" }
-      { "$\(P)",           "PID_D", "$\(PORT)", 2001,     19, "sec",            "" }
-      { "$\(P)",  "RAW_CYCLE_TIME", "$\(PORT)", 2021,      0,    "",            "" }
-      { "$\(P)",   "OUT_POWER_LIM", "$\(PORT)", 2021,      1,    "",            "" }
+      { "$\(P)",        "HystRaw", "$\(PORT)", 2001,     14,    "",            "" }
+      { "$\(P)",       "CmdDelay", "$\(PORT)", 2001,     15, "sec",            "" }
+      { "$\(P)",           "Kp", "$\(PORT)", 2001,     17,   "C",            "" }
+      { "$\(P)",           "Ki", "$\(PORT)", 2001,     18, "sec",            "" }
+      { "$\(P)",           "Kd", "$\(PORT)", 2001,     19, "sec",            "" }
+      { "$\(P)",  "CycleTimeRaw", "$\(PORT)", 2021,      0,    "",            "" }
+      { "$\(P)",   "OutPowerLim", "$\(PORT)", 2021,      1,    "",            "" }
 
-      { "$\(P)",    "RAW_AL1_HYST", "$\(PORT)", 2021,      7,    "",            "" }
-      { "$\(P)",       "AL1_DELAY", "$\(PORT)", 2021,      8,   "s",            "" }
-      { "$\(P)",    "RAW_AL2_HYST", "$\(PORT)", 2021,     15,    "",            "" }
-      { "$\(P)",       "AL2_DELAY", "$\(PORT)", 2021,     16,    "",            "" }
+      { "$\(P)",    "Al1:HistRaw", "$\(PORT)", 2021,      7,    "",            "" }
+      { "$\(P)",       "Al1:Delay", "$\(PORT)", 2021,      8,   "s",            "" }
+      { "$\(P)",    "Al2:HistRaw", "$\(PORT)", 2021,     15,    "",            "" }
+      { "$\(P)",       "Al2:Delay", "$\(PORT)", 2021,     16,    "",            "" }
 
-      { "$\(P)",   "RAW_PROP_BAND", "$\(PORT)", 2021,     19,    "",            "" }
-      { "$\(P)",     "RAW_OVERLAP", "$\(PORT)", 2041,      0,    "",            "" }
-      { "$\(P)",   "COOL_CYC_TIME", "$\(PORT)", 2041,      1,    "",            "" }
-      { "$\(P)",     "CONV_FILTER", "$\(PORT)", 2041,      2,    "",            "" }
-      { "$\(P)",    "RAW_DEV_TUNE", "$\(PORT)", 2041,      6,    "",            "" }
+      { "$\(P)",   "PropBandRaw", "$\(PORT)", 2021,     19,    "",            "" }
+      { "$\(P)",     "OverlapRaw", "$\(PORT)", 2041,      0,    "",            "" }
+      { "$\(P)",   "CoolCycTime", "$\(PORT)", 2041,      1,    "",            "" }
+      { "$\(P)",     "ConvFilter", "$\(PORT)", 2041,      2,    "",            "" }
+      { "$\(P)",    "DevTuneRaw", "$\(PORT)", 2041,      6,    "",            "" }
 
-      { "$\(P)",    "RAW_GRADIENT", "$\(PORT)", 2041,     10,    "",            "" }
-      { "$\(P)",      "MAINT_TIME", "$\(PORT)", 2041,     11,    "",            "" }
-      { "$\(P)", "P_SLAVE_ADDRESS", "$\(PORT)", 2041,     16,    "",            "" }
-      { "$\(P)",       "SER_DELAY", "$\(PORT)", 2041,     17,    "",            "" }
-      { "$\(P)",    "ADDR_RETRANS", "$\(PORT)", 2041,     19,    "",            "" }
-      { "$\(P)",     "LOW_RETRANS", "$\(PORT)", 2061,      0,    "",            "" }
-      { "$\(P)",    "HIGH_RETRANS", "$\(PORT)", 2061,      1,    "",            "" }
-      { "$\(P)",   "RAW_FALL_GRAD", "$\(PORT)", 2061,      3,    "",            "" }
+      { "$\(P)",    "GradientRaw", "$\(PORT)", 2041,     10,    "",            "" }
+      { "$\(P)",      "MaintTime", "$\(PORT)", 2041,     11,    "",            "" }
+      { "$\(P)", "PSlaveAddress", "$\(PORT)", 2041,     16,    "",            "" }
+      { "$\(P)",       "SerDelay", "$\(PORT)", 2041,     17,    "",            "" }
+      { "$\(P)",    "AddrRetrans", "$\(PORT)", 2041,     19,    "",            "" }
+      { "$\(P)",     "LowRetrans", "$\(PORT)", 2061,      0,    "",            "" }
+      { "$\(P)",    "HighRetrans", "$\(PORT)", 2061,      1,    "",            "" }
+      { "$\(P)",   "FallGradRaw", "$\(PORT)", 2061,      3,    "",            "" }
 
 }
 
 file "longin.template" {
     pattern { P,                        R,             PORT, OFFSET,      EGU,       SCAN,              FLNK }
-      { "$\(P)",            "DEV_TYPE_IN",    "$\(PORT)_R0",      0,       "", "I/O Intr",                "" }
-      { "$\(P)",         "DEV_VERSION_IN",    "$\(PORT)_R0",      1,       "", "I/O Intr",                "" }
-      { "$\(P)",        "BOOT_VERSION_IN",    "$\(PORT)_R0",      6,       "", "I/O Intr",                "" }
+      { "$\(P)",            "DevType",    "$\(PORT)_R0",      0,       "", "I/O Intr",                "" }
+      { "$\(P)",         "DevVersion",    "$\(PORT)_R0",      1,       "", "I/O Intr",                "" }
+      { "$\(P)",        "BootVersion",    "$\(PORT)_R0",      6,       "", "I/O Intr",                "" }
 
-      { "$\(P)",            "RAW_TEMP_IN", "$\(PORT)_R1000",      0,       "", "I/O Intr",    "$\(P)TEMP_IN" }
-      { "$\(P)",              "ALARM1_IN", "$\(PORT)_R1000",      5,       "", "I/O Intr",                "" }
-      { "$\(P)",              "ALARM2_IN", "$\(PORT)_R1000",      6,       "", "I/O Intr",                "" }
-      { "$\(P)",        "SET_GRADIENT_IN", "$\(PORT)_R1000",      7,       "", "I/O Intr",                "" }
+      { "$\(P)",            "TempRaw", "$\(PORT)_R1000",      0,       "", "I/O Intr",               "" }
+      { "$\(P)",              "Alarm1", "$\(PORT)_R1000",      5,       "", "I/O Intr",                "" }
+      { "$\(P)",              "Alarm2", "$\(PORT)_R1000",      6,       "", "I/O Intr",                "" }
+      { "$\(P)",        "SetGradient", "$\(PORT)_R1000",      7,       "", "I/O Intr",                "" }
 
-      { "$\(P)",         "RAW_HEATING_IN", "$\(PORT)_R1000",      9, "1/100%", "I/O Intr",                "" }
-      { "$\(P)",         "RAW_COOLING_IN", "$\(PORT)_R1000",     10, "1/100%", "I/O Intr",                "" }
-      { "$\(P)",           "CAN_RESET_IN", "$\(PORT)_R1000",     12,       "", "I/O Intr",                "" }
+      { "$\(P)",         "HeatingRaw", "$\(PORT)_R1000",      9, "1/100%", "I/O Intr",                "" }
+      { "$\(P)",         "CoolingRaw", "$\(PORT)_R1000",     10, "1/100%", "I/O Intr",                "" }
+      { "$\(P)",           "CanReset", "$\(PORT)_R1000",     12,       "", "I/O Intr",                "" }
 
-      { "$\(P)",         "RAW_CJ_TEMP_IN", "$\(PORT)_R1000",     14, "1/10 C", "I/O Intr", "$\(P)CJ_TEMP_IN" }
-      { "$\(P)",        "OFFLINE_TIME_IN", "$\(PORT)_R1000",     19,     "ms", "I/O Intr",                "" }
+      { "$\(P)",         "CjTempRaw", "$\(PORT)_R1000",     14, "1/10 C", "I/O Intr",              "" }
+      { "$\(P)",        "OfflineTemp", "$\(PORT)_R1000",     19,     "ms", "I/O Intr",                "" }
 
-      { "$\(P)",         "PROCESS_VIS_IN", "$\(PORT)_R1100",      0,    "dec", "I/O Intr",                "" }
-      { "$\(P)",             "VIS_SP1_IN", "$\(PORT)_R1100",      1,    "dec", "I/O Intr",                "" }
-      { "$\(P)",             "VIS_SP2_IN", "$\(PORT)_R1100",      2,    "dec", "I/O Intr",                "" }
-      { "$\(P)",             "VIS_SP3_IN", "$\(PORT)_R1100",      3,    "dec", "I/O Intr",                "" }
-      { "$\(P)",             "VIS_SP4_IN", "$\(PORT)_R1100",      4,    "dec", "I/O Intr",                "" }
-      { "$\(P)",          "VIS_ALARM1_IN", "$\(PORT)_R1100",      5,    "dec", "I/O Intr",                "" }
-      { "$\(P)",          "VIS_ALARM2_IN", "$\(PORT)_R1100",      6,    "dec", "I/O Intr",                "" }
-      { "$\(P)",        "VIS_SET_GRAD_IN", "$\(PORT)_R1100",      7,    "dec", "I/O Intr",                "" }
-      { "$\(P)",      "HEATING_OUTPUT_IN", "$\(PORT)_R1100",      8,      "%", "I/O Intr",                "" }
-      { "$\(P)",  "RAW_COOLING_OUTPUT_IN", "$\(PORT)_R1100",     10,  "1/10%", "I/O Intr",                "" }
+      { "$\(P)",         "ProcessVis", "$\(PORT)_R1100",      0,    "dec", "I/O Intr",                "" }
+      { "$\(P)",             "VisSP1", "$\(PORT)_R1100",      1,    "dec", "I/O Intr",                "" }
+      { "$\(P)",             "VisSP2", "$\(PORT)_R1100",      2,    "dec", "I/O Intr",                "" }
+      { "$\(P)",             "VisSP3", "$\(PORT)_R1100",      3,    "dec", "I/O Intr",                "" }
+      { "$\(P)",             "VisSP4", "$\(PORT)_R1100",      4,    "dec", "I/O Intr",                "" }
+      { "$\(P)",          "VisAlarm1", "$\(PORT)_R1100",      5,    "dec", "I/O Intr",                "" }
+      { "$\(P)",          "VisAlarm2", "$\(PORT)_R1100",      6,    "dec", "I/O Intr",                "" }
+      { "$\(P)",        "VisSetGrad", "$\(PORT)_R1100",      7,    "dec", "I/O Intr",                "" }
+      { "$\(P)",      "HeatingOutput", "$\(PORT)_R1100",      8,      "%", "I/O Intr",                "" }
+      { "$\(P)",  "CoolingOutputRaw", "$\(PORT)_R1100",     10,  "1/10%", "I/O Intr",                "" }
 
 }
 
 file "bi_bit.template" {
     pattern { P,              R,             PORT, OFFSET,                  ZNAM,                 ONAM,        ZSV,        OSV,       SCAN }
-      { "$\(P)",   "RUNNING_IN", "$\(PORT)_R1000",     15,             "Stopped",            "Started", "NO_ALARM", "NO_ALARM", "I/O Intr" }
-      { "$\(P)", "LOCK_CONV_IN", "$\(PORT)_R1000",     16, "Lock conversion off", "Lock conversion on", "NO_ALARM", "NO_ALARM", "I/O Intr" }
-      { "$\(P)",    "TUNING_IN", "$\(PORT)_R1000",     17,          "Tuning off",          "Tuning on", "NO_ALARM", "NO_ALARM", "I/O Intr" }
-      { "$\(P)",    "MANUAL_IN", "$\(PORT)_R1000",     18,           "Automatic",             "Manual", "NO_ALARM", "NO_ALARM", "I/O Intr" }
+      { "$\(P)",   "Running", "$\(PORT)_R1000",     15,             "Stopped",            "Started", "NO_ALARM", "NO_ALARM", "I/O Intr" }
+      { "$\(P)", "LockConv", "$\(PORT)_R1000",     16, "Lock conversion off", "Lock conversion on", "NO_ALARM", "NO_ALARM", "I/O Intr" }
+      { "$\(P)",    "Tuning", "$\(PORT)_R1000",     17,          "Tuning off",          "Tuning on", "NO_ALARM", "NO_ALARM", "I/O Intr" }
+      { "$\(P)",    "Manual", "$\(PORT)_R1000",     18,           "Automatic",             "Manual", "NO_ALARM", "NO_ALARM", "I/O Intr" }
 }
 
 file "atr142_output_status.template" {
     pattern { P,                R,             PORT, OFFSET,       SCAN }
-      { "$\(P)", "OUTPUTS_STATUS", "$\(PORT)_R1000",      8, "I/O Intr" }
+      { "$\(P)", "OutputsStatus", "$\(PORT)_R1000",      8, "I/O Intr" }
 }
 
 file "atr142_error_flags.template" {
     pattern { P,                R,             PORT, OFFSET,       SCAN }
-      { "$\(P)", "ERROR_FLAGS_IN", "$\(PORT)_R1000",     13, "I/O Intr" }
+      { "$\(P)", "ErrorFlags", "$\(PORT)_R1000",     13, "I/O Intr" }
 }
 
 file "longout.template" {
-    pattern { P,                     R,             PORT, OFFSET }
-      { "$\(P)",   "SLAVE_ADDRESS_OUT",    "$\(PORT)_W0",      5 }
-      { "$\(P)",  "AUTOMATIC_ADDR_OUT",   "$\(PORT)_W50",      0 }
-      { "$\(P)", "CODE_COMPARISON_OUT",   "$\(PORT)_W50",      1 }
-      { "$\(P)", "CODE_COMPARISON_OUT",  "$\(PORT)_W500",      0 }
+    pattern
+      { P,                     R,             PORT, OFFSET }
+      { "$\(P)",   "SlaveAddress",    "$\(PORT)_W0",      5 }
+      { "$\(P)",  "AutomaticAddr",   "$\(PORT)_W50",      0 }
+      { "$\(P)", "CodeComparison",   "$\(PORT)_W50",      1 }
+      { "$\(P)", "LoadDefaults",  "$\(PORT)_W500",      0 }
 
-      { "$\(P)",           "RESET_OUT", "$\(PORT)_W1000",     12 }
-      { "$\(P)",  "SERIAL_DISABLE_OUT", "$\(PORT)_W3000",      0 }
+      { "$\(P)",           "Reset", "$\(PORT)_W1000",     12 }
+      { "$\(P)",  "SerialDisable", "$\(PORT)_W3000",      0 }
 }
 
 file "bo_bit.template" {
-    pattern { P,               R,             PORT, OFFSET,                  ZNAM,                 ONAM,        ZSV,        OSV,       SCAN }
-      { "$\(P)", "LOCK_CONV_OUT", "$\(PORT)_W1000",     16, "Lock conversion off", "Lock conversion on", "NO_ALARM", "NO_ALARM", "I/O Intr" }
+    pattern 
+      {       P,          R,             PORT, OFFSET,                  ZNAM,                 ONAM,        ZSV,        OSV,       SCAN }
+      { "$\(P)", "LockConv", "$\(PORT)_W1000",     16, "Lock conversion off", "Lock conversion on", "NO_ALARM", "NO_ALARM", "I/O Intr" }
 }
 

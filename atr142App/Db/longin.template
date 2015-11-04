@@ -1,4 +1,4 @@
-record(longin,"$(P)$(R)") {
+record(longin,"$(P)$(R)-I") {
     field(DTYP,"asynUInt32Digital")
     field(INP,"@asynMask($(PORT) $(OFFSET) 0xFFFF)")
     field(SCAN,"$(SCAN)")

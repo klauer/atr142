@@ -1,0 +1,9 @@
+## Read-only: $(R)
+
+record(ai, "$(P)$(R)-I") {
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(PORT)_R$(BASE) $(OFFSET) $(TIMEOUT))FLOAT32_LE")
+    field(SCAN, "I/O Intr")
+    field(EGU, "$(EGU)")
+    field(FLNK, "$(FLNK)")
+}
